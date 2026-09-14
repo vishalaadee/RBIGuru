@@ -111,10 +111,10 @@ h2.blk{font-size:clamp(26px,3.6vw,38px);margin:0 0 14px;line-height:1.12}
 @media(max-width:940px){.rd{grid-template-columns:1fr}}
 .side{position:sticky;top:80px;align-self:start;font-size:13.5px}
 @media(max-width:940px){.side{position:static;display:flex;gap:8px;overflow-x:auto;padding-bottom:8px;border-bottom:1px solid var(--line2)}}
-.side a{display:block;color:var(--dim);padding:5px 0 5px 11px;border-left:2px solid transparent;white-space:nowrap}
+.side a{display:block;color:var(--dim);padding:5px 0 5px 11px;border-left:2px solid transparent;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .side a:hover{color:var(--green);text-decoration:none}
 .side a.here{color:var(--ink);border-left-color:var(--green)}
-@media(max-width:940px){.side a{border-left:none;border-bottom:2px solid transparent;padding:4px 3px}.side a.here{border-bottom-color:var(--green)}}
+@media(max-width:940px){.side a{border-left:none;border-bottom:2px solid transparent;padding:4px 8px;flex:none;max-width:46vw}.side a.here{border-bottom-color:var(--green)}}
 .side .sh{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--dim);margin:0 0 7px;padding-left:11px}
 @media(max-width:940px){.side .sh{display:none}}
 .art{max-width:74ch;min-width:0}
@@ -246,7 +246,7 @@ details.qa[open]>summary::before{transform:rotate(90deg)}
 .trk{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--panel)}
 table.tk{width:100%;border-collapse:collapse;font-size:13.5px;min-width:560px}
 table.tk th,table.tk td{padding:7px 11px;border-bottom:1px solid var(--line2);text-align:left}
-table.tk thead th{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--green);background:var(--panel2);position:sticky;top:60px}
+table.tk thead th{font-family:var(--mono);font-size:10px;letter-spacing:.06em;color:var(--green);background:var(--panel2)}
 table.tk td.mark{text-align:center;cursor:pointer;font-family:var(--mono);color:var(--dim);user-select:none}
 table.tk td.mark.on{color:var(--green);font-weight:700}
 table.tk tbody tr:hover td{background:var(--panel2)}
@@ -1577,13 +1577,13 @@ SIMS.gdp=function(host){
   simShell(host,"Nominal, real and the deflator","one economy, three numbers",
    '<div class="row"><div><label>output growth (real) — <b class="gl"></b></label><input type="range" class="g" min="-4" max="12" step="0.5" value="7"></div>'
    +'<div><label>price rise (deflator) — <b class="pl"></b></label><input type="range" class="p" min="-2" max="14" step="0.5" value="4"></div>'
-   +'<div><label>net product taxes change — <b class="tl"></b></label><input type="range" class="t" min="-3" max="3" step="0.25" value="0.5"></div></div>'
+   +'<div><label>net product taxes change — <b class="tl"></b></label><input type="range" class="txr" min="-3" max="3" step="0.25" value="0.5"></div></div>'
    +'<div class="ro-wrap"><div class="ro"><div class="v v-nom"></div><div class="k">nominal GDP growth</div></div>'
    +'<div class="ro mut"><div class="v v-real"></div><div class="k">real GDP growth</div></div>'
    +'<div class="ro warn"><div class="v v-gva"></div><div class="k">real GVA growth</div></div>'
    +'<div class="ro mut"><div class="v v-def"></div><div class="k">deflator inflation</div></div></div>'
    +'<div class="verdict vd"></div>');
-  var g=$(".g",host),p=$(".p",host),t=$(".t",host);
+  var g=$(".g",host),p=$(".p",host),t=$(".txr",host);
   function draw(){
     var r=+g.value,d=+p.value,tx=+t.value,nom=((1+r/100)*(1+d/100)-1)*100,gva=r-tx;
     $(".gl",host).textContent=f1(r)+"%";$(".pl",host).textContent=f1(d)+"%";$(".tl",host).textContent=(tx>0?"+":"")+f1(tx)+" pp";
@@ -1850,13 +1850,13 @@ SIMS.msp=function(host){
 SIMS.iip=function(host){
   var USE=[["Primary goods",34],["Infrastructure/construction",12],["Intermediate goods",17],["Capital goods",8],["Consumer non-durables",15],["Consumer durables",13]];
   simShell(host,"Reading the IIP by use","which component tells you what",
-   '<div class="row"><div><label>capital goods growth — <b class="kl"></b></label><input type="range" class="k" min="-15" max="25" value="8"></div>'
-   +'<div><label>consumer durables growth — <b class="dl"></b></label><input type="range" class="d" min="-15" max="25" value="5"></div></div>'
+   '<div class="row"><div><label>capital goods growth — <b class="kl"></b></label><input type="range" class="cg" min="-15" max="25" value="8"></div>'
+   +'<div><label>consumer durables growth — <b class="dl"></b></label><input type="range" class="cd" min="-15" max="25" value="5"></div></div>'
    +'<div class="dg wg" style="margin-top:12px"></div>'
    +'<div class="ro-wrap"><div class="ro"><div class="v v-sig"></div><div class="k">what the cycle is saying</div></div></div>'
    +'<div class="verdict vd"></div>');
   $(".wg",host).innerHTML=USE.map(function(u){return '<span class="dgn">'+u[0]+'<small>weight ≈'+u[1]+'%</small></span>'}).join("");
-  var k=$(".k",host),d=$(".d",host);
+  var k=$(".cg",host),d=$(".cd",host);
   function draw(){
     var K=+k.value,D=+d.value;
     $(".kl",host).textContent=(K>0?"+":"")+K+"%";$(".dl",host).textContent=(D>0?"+":"")+D+"%";
@@ -1873,13 +1873,13 @@ SIMS.iip=function(host){
 /* ============ BoP ============ */
 SIMS.bop=function(host){
   simShell(host,"Balance of payments","build the accounts and find the residual",
-   '<div class="row"><div><label>merchandise trade balance ($bn) — <b class="tl"></b></label><input type="range" class="t" min="-400" max="100" step="10" value="-260"></div>'
-   +'<div><label>net services exports — <b class="sl"></b></label><input type="range" class="s" min="0" max="300" step="10" value="160"></div>'
+   '<div class="row"><div><label>merchandise trade balance ($bn) — <b class="tl"></b></label><input type="range" class="tb" min="-400" max="100" step="10" value="-260"></div>'
+   +'<div><label>net services exports — <b class="sl"></b></label><input type="range" class="sv" min="0" max="300" step="10" value="160"></div>'
    +'<div><label>net remittances — <b class="ml"></b></label><input type="range" class="m" min="0" max="200" step="5" value="110"></div>'
    +'<div><label>net capital inflows — <b class="cl"></b></label><input type="range" class="c" min="-100" max="200" step="5" value="80"></div></div>'
    +'<div class="ro-wrap"><div class="ro ro-ca"><div class="v v-ca"></div><div class="k">current account balance</div></div><div class="ro mut"><div class="v v-pct"></div><div class="k">as % of GDP (at $4tn)</div></div><div class="ro"><div class="v v-res"></div><div class="k">reserve change</div></div></div>'
    +'<div class="verdict vd"></div>');
-  var t=$(".t",host),s=$(".s",host),m=$(".m",host),c=$(".c",host);
+  var t=$(".tb",host),s=$(".sv",host),m=$(".m",host),c=$(".c",host);
   function draw(){
     var T=+t.value,S=+s.value,M=+m.value,C=+c.value;
     var ca=T+S+M-25, res=ca+C;
@@ -2009,3 +2009,297 @@ SIMS.trans=function(host){
   ],"Follow the rate");
 };
 </script>
+<script>
+/* ============ CRAR ============ */
+SIMS.crar=function(host){
+  simShell(host,"Capital adequacy","the denominator does the work",
+   '<div class="row"><div><label>eligible capital (₹ crore) — <b class="kl"></b></label><input type="range" class="cap" min="500" max="5000" step="50" value="1400"></div>'
+   +'<div><label>risk-weighted assets (₹ crore) — <b class="rl"></b></label><input type="range" class="rwa" min="5000" max="60000" step="500" value="15000"></div></div>'
+   +'<div class="tabs mixw"><button class="tab on" data-v="sov">Shift mix: more sovereign bonds (0% weight)</button><button class="tab" data-v="unsec">Shift mix: more unsecured retail (125% weight)</button></div>'
+   +'<div class="ro-wrap"><div class="ro ro-c"><div class="v v-crar"></div><div class="k">CRAR</div></div><div class="ro mut"><div class="v v-min"></div><div class="k">regulatory minimum</div></div><div class="ro mut"><div class="v v-buf"></div><div class="k">headroom over 9%+2.5% CCB</div></div></div>'
+   +'<div class="verdict vd"></div>');
+  var k=$(".cap",host),r=$(".rwa",host),mix=0;
+  function draw(){
+    var K=+k.value,R=+r.value;
+    if(mix===1)R=R*0.7; if(mix===2)R=R*1.35;
+    var crar=K/R*100;
+    $(".kl",host).textContent="₹"+fmt(+k.value);$(".rl",host).textContent="₹"+fmt(+r.value);
+    $(".v-crar",host).textContent=f2(crar)+"%";$(".v-min",host).textContent="9.00%";
+    $(".v-buf",host).textContent=f2(crar-11.5)+" pp";
+    $(".ro-c",host).className="ro ro-c"+(crar<9?" bad":crar<11.5?" warn":" ");
+    $(".vd",host).innerHTML=crar<9?"<b>Below the regulatory minimum.</b> The bank breaches 9% CRAR — this triggers supervisory action, typically Prompt Corrective Action, restricting dividends, branch expansion and lending growth until capital is restored."
+      :crar<11.5?"<b>Above the floor, inside the buffer.</b> The bank meets the 9% minimum but has not fully built the 2.5% capital conservation buffer — restrictions on discretionary distributions like dividends may still apply."
+      :"<b>Comfortable.</b> The bank clears both the minimum and the conservation buffer. Notice that CRAR moved without capital changing at all when you shifted the asset mix — because "+(mix===1?"sovereign bonds carry a zero risk weight, so reallocating toward them raises CRAR for free":mix===2?"unsecured retail credit carries a higher risk weight, so the same book now consumes far more capital":"different assets carry different weights")+". That is the exact mechanism behind an RBI risk-weight change as a macroprudential tool.";
+  }
+  $$(".mixw .tab",host).forEach(function(b,i){b.addEventListener("click",function(){mix=i;$$(".mixw .tab",host).forEach(function(x){x.classList.remove("on")});b.classList.add("on");draw()})});
+  k.addEventListener("input",draw);r.addEventListener("input",draw);draw();
+};
+
+/* ============ NPA ladder ============ */
+SIMS.npa=function(host){
+  makeStepper(host,"The NPA ladder","from standard to loss, one stage at a time",[
+   ["Standard, ≤30 days overdue","No flag","provision ~0.4%"],
+   ["SMA-0 · 1-30 days","Early warning, internal monitoring","provision ~0.4%"],
+   ["SMA-1 · 31-60 days","Reported to Central Repository of Information on Large Credits","provision ~0.4%"],
+   ["SMA-2 · 61-90 days","Last warning before NPA; resolution plan window opens","provision ~0.4-1%"],
+   ["NPA · 90+ days overdue","Income recognition stops; interest is no longer accrued to profit","classified sub-standard"],
+   ["Sub-standard · up to 12 months as NPA","Provision rises sharply on the unsecured portion","provision 15-25%"],
+   ["Doubtful · beyond 12 months","Provision rises further with age, and rises more on the unsecured part","provision 25-100%"],
+   ["Loss · identified as unrecoverable","Should be written off; if retained, 100% provided","provision 100%"]
+  ],[
+   "Follow one loan from healthy to written off. Every stage has a name, a trigger and a provisioning consequence — and every provisioning charge reduces reported profit the moment it is booked.",
+   "No classification yet, but the RBI's early-warning framework already wants this account on a watchlist.",
+   "The special mention account ladder exists so that banks — and the regulator — see stress building before the 90-day trigger, not after.",
+   "SMA-1 crossed: larger exposures get reported to a central registry so no bank is blindsided by a borrower's stress elsewhere in the system.",
+   "The last chance. Banks are expected to have a board-approved resolution plan ready by the time an account reaches SMA-2.",
+   "The defining trigger, and the one asked every year: 90 days past due on interest or principal. The bank must now stop recognising interest income on the loan.",
+   "Provisioning jumps immediately and materially — this is the point where a bad loan visibly dents a bank's quarterly results.",
+   "The longer an account stays bad, the less confidence there is in recovery, so provisioning keeps rising with age even before the loan is written off.",
+   "At 100% provisioning the loss is already fully absorbed in the accounts — a write-off at this point is an accounting formality, not a new loss."
+  ],"Age the loan");
+};
+
+/* ============ bond price-yield ============ */
+SIMS.bond=function(host){
+  simShell(host,"Price and yield move apart","and duration says how far",
+   '<div class="row"><div><label>coupon rate — <b class="cl"></b></label><input type="range" class="c" min="2" max="10" step="0.25" value="6.5"></div>'
+   +'<div><label>years to maturity — <b class="yl"></b></label><input type="range" class="y" min="1" max="30" value="10"></div>'
+   +'<div><label>market yield — <b class="ml"></b></label><input type="range" class="m" min="2" max="12" step="0.1" value="6.5"></div></div>'
+   +'<svg viewBox="0 0 380 150" style="width:100%;height:auto;margin-top:8px">'
+   +'<line x1="40" y1="130" x2="360" y2="130" stroke="var(--line)"/><line x1="40" y1="20" x2="40" y2="130" stroke="var(--line)"/>'
+   +'<path class="curve" d="" stroke="var(--green)" stroke-width="2" fill="none"/>'
+   +'<circle class="dot" cx="0" cy="0" r="5" fill="var(--gold)"/>'
+   +'<text class="lab" x="330" y="145">yield →</text><text class="lab" x="10" y="26">price</text></svg>'
+   +'<div class="ro-wrap"><div class="ro ro-p"><div class="v v-p"></div><div class="k">bond price (per ₹100 face)</div></div><div class="ro mut"><div class="v v-d"></div><div class="k">approx. duration (years)</div></div><div class="ro warn"><div class="v v-move"></div><div class="k">price move for +1% yield</div></div></div>'
+   +'<div class="verdict vd"></div>');
+  var c=$(".c",host),y=$(".y",host),m=$(".m",host);
+  function price(coupon,years,yld){
+    var cf=coupon,pv=0;
+    for(var t=1;t<=years;t++){pv+=cf/Math.pow(1+yld/100,t)}
+    pv+=100/Math.pow(1+yld/100,years);
+    return pv;
+  }
+  function draw(){
+    var C=+c.value,Y=+y.value,M=+m.value,p=price(C,Y,M);
+    var dur=Y*0.6+ (10-M>0?0:0); // rough visual proxy, real duration computed below
+    var p1=price(C,Y,M+1);
+    var approxDur=(p-p1)/p/0.01;
+    $(".cl",host).textContent=f1(C)+"%";$(".yl",host).textContent=Y+" yrs";$(".ml",host).textContent=f1(M)+"%";
+    $(".v-p",host).textContent="₹"+f2(p);
+    $(".v-d",host).textContent=f1(Math.abs(approxDur));
+    $(".v-move",host).textContent=(p1-p>=0?"+":"")+f2(p1-p);
+    $(".ro-p",host).className="ro ro-p"+(p<95?" bad":p>105?" warn":"");
+    var pts=[];for(var yy=2;yy<=12;yy+=0.5){var pr=price(C,Y,yy);pts.push([40+(yy-2)/10*320,130-Math.min(110,Math.max(0,(pr-60)/1.2))])}
+    $(".curve",host).setAttribute("d","M"+pts.map(function(p2){return f1(p2[0])+" "+f1(p2[1])}).join(" L"));
+    var dx=40+(M-2)/10*320, dy=130-Math.min(110,Math.max(0,(p-60)/1.2));
+    $(".dot",host).setAttribute("cx",dx);$(".dot",host).setAttribute("cy",dy);
+    $(".vd",host).innerHTML="<b>At par when coupon equals yield.</b> "+(Math.abs(C-M)<0.05?"They're equal now — the bond trades exactly at ₹100.":(M>C?"The market yield ("+f1(M)+"%) exceeds the coupon ("+f1(C)+"%), so this bond trades at a <b>discount</b>, ₹"+f2(p)+", to compete with new issues.":"The coupon ("+f1(C)+"%) exceeds the market yield ("+f1(M)+"%), so this bond trades at a <b>premium</b>, ₹"+f2(p)+"."))
+     +" A 1-percentage-point rise in yield moves the price by about ₹"+f2(Math.abs(p1-p))+" — and that sensitivity grows with maturity and shrinks with a higher coupon, which is exactly what duration measures.";
+  }
+  [c,y,m].forEach(function(x){x.addEventListener("input",draw)});draw();
+};
+
+/* ============ option payoff ============ */
+SIMS.payoff=function(host){
+  simShell(host,"Option payoff","limited loss, running gain — for the buyer",
+   '<div class="tabs pk"><button class="tab on" data-v="call">Long call</button><button class="tab" data-v="put">Long put</button><button class="tab" data-v="wcall">Short (written) call</button></div>'
+   +'<div class="row"><div><label>strike price — <b class="kl"></b></label><input type="range" class="strike" min="80" max="120" value="100"></div>'
+   +'<div><label>premium — <b class="pl"></b></label><input type="range" class="prem" min="1" max="15" value="5"></div></div>'
+   +'<svg viewBox="0 0 380 170" style="width:100%;height:auto;margin-top:6px">'
+   +'<line x1="30" y1="90" x2="360" y2="90" stroke="var(--line)"/><line x1="195" y1="20" x2="195" y2="160" stroke="var(--line2)" stroke-dasharray="3 3"/>'
+   +'<path class="pay" d="" stroke="var(--green)" stroke-width="2.5" fill="none"/>'
+   +'<text class="lab" x="330" y="105">spot price →</text><text class="lab strikeL" x="180" y="14">strike</text></svg>'
+   +'<div class="ro-wrap"><div class="ro"><div class="v v-maxl"></div><div class="k">max loss</div></div><div class="ro"><div class="v v-maxg"></div><div class="k">max gain</div></div><div class="ro mut"><div class="v v-be"></div><div class="k">breakeven spot</div></div></div>'
+   +'<div class="verdict vd"></div>');
+  var mode="call",k=$(".strike",host),p=$(".prem",host);
+  function draw(){
+    var K=+k.value,P=+p.value,pts=[];
+    for(var s=60;s<=140;s+=2){
+      var x=30+((s-60)/80)*330,pay;
+      if(mode==="call")pay=Math.max(0,s-K)-P;
+      else if(mode==="put")pay=Math.max(0,K-s)-P;
+      else pay=P-Math.max(0,s-K);
+      var y=90-pay*3;
+      pts.push([x,Math.max(20,Math.min(160,y))]);
+    }
+    $(".pay",host).setAttribute("d","M"+pts.map(function(pt){return f1(pt[0])+" "+f1(pt[1])}).join(" L"));
+    $(".strikeL",host).setAttribute("x",30+((K-60)/80)*330-16);
+    $(".kl",host).textContent=K;$(".pl",host).textContent="₹"+P;
+    var maxl=mode==="wcall"?"unlimited":"₹"+P+" (premium)";
+    var maxg=mode==="wcall"?"₹"+P+" (premium)":mode==="put"?"₹"+(K-P)+" (if spot→0)":"unlimited";
+    var be=mode==="put"?K-P:K+P;
+    $(".v-maxl",host).textContent=maxl;$(".v-maxg",host).textContent=maxg;$(".v-be",host).textContent=be;
+    $(".vd",host).innerHTML=mode==="wcall"
+      ?"<b>The mirror image.</b> The option writer collects the premium up front — that is the entire possible gain — but carries unlimited loss if the spot price keeps rising. This asymmetry is exactly why option writing is margined by the exchange while option buying is not."
+      :"<b>The buyer's shape.</b> Loss is capped at the premium paid, no matter how far the spot moves against the position; gain runs with the market "+(mode==="call"?"upward without limit":"down to zero")+". Paying a small, known cost for a large, uncertain benefit is the whole appeal of buying options — and the whole reason writers demand a premium to take the other side.";
+    $$(".pk .tab",host).forEach(function(b){b.classList.toggle("on",b.dataset.v===mode)});
+  }
+  $$(".pk .tab",host).forEach(function(b){b.addEventListener("click",function(){mode=b.dataset.v;draw()})});
+  k.addEventListener("input",draw);p.addEventListener("input",draw);draw();
+};
+
+/* ============ deficit ============ */
+SIMS.deficit=function(host){
+  simShell(host,"From revenue to primary deficit","one budget, four numbers",
+   '<div class="row"><div><label>revenue receipts (₹ lakh cr) — <b class="rrl"></b></label><input type="range" class="rr" min="15" max="40" step="0.5" value="26"></div>'
+   +'<div><label>revenue expenditure — <b class="rel"></b></label><input type="range" class="re" min="20" max="50" step="0.5" value="37"></div>'
+   +'<div><label>capital receipts (non-debt) — <b class="crl"></b></label><input type="range" class="cr" min="0" max="3" step="0.1" value="0.8"></div>'
+   +'<div><label>capital expenditure — <b class="cel"></b></label><input type="range" class="ce" min="5" max="15" step="0.5" value="11"></div>'
+   +'<div><label>interest payments — <b class="il"></b></label><input type="range" class="i" min="5" max="15" step="0.5" value="11.5"></div></div>'
+   +'<div class="ro-wrap"><div class="ro ro-rd"><div class="v v-rd"></div><div class="k">revenue deficit</div></div><div class="ro ro-fd"><div class="v v-fd"></div><div class="k">fiscal deficit</div></div><div class="ro"><div class="v v-pd"></div><div class="k">primary deficit</div></div><div class="ro mut"><div class="v v-fdp"></div><div class="k">fiscal deficit, % of GDP at ₹300 lakh cr</div></div></div>'
+   +'<div class="verdict vd"></div>');
+  var rr=$(".rr",host),re=$(".re",host),cr=$(".cr",host),ce=$(".ce",host),ii=$(".i",host);
+  function draw(){
+    var RR=+rr.value,RE=+re.value,CR=+cr.value,CE=+ce.value,I=+ii.value;
+    var totRec=RR+CR, totExp=RE+CE;
+    var rd=RE-RR, fd=totExp-totRec, pd=fd-I;
+    $(".rrl",host).textContent="₹"+f1(RR);$(".rel",host).textContent="₹"+f1(RE);$(".crl",host).textContent="₹"+f1(CR);$(".cel",host).textContent="₹"+f1(CE);$(".il",host).textContent="₹"+f1(I);
+    $(".v-rd",host).textContent="₹"+f1(rd)+" lakh cr";
+    $(".v-fd",host).textContent="₹"+f1(fd)+" lakh cr";
+    $(".v-pd",host).textContent="₹"+f1(pd)+" lakh cr";
+    $(".v-fdp",host).textContent=f1(fd/300*100)+"%";
+    $(".ro-rd",host).className="ro ro-rd"+(rd>0?" bad":" ");
+    $(".ro-fd",host).className="ro ro-fd"+(fd/300*100>4.5?" warn":"");
+    $(".vd",host).innerHTML=(rd>0?"<b>Revenue deficit of ₹"+f1(rd)+" lakh crore.</b> The government is borrowing to fund consumption — salaries, subsidies, interest — not to create assets. ":"<b>No revenue deficit</b> — revenue receipts cover revenue spending, so all borrowing funds capital formation. ")
+     +"Fiscal deficit is ₹"+f1(fd)+" lakh crore, "+f1(fd/300*100)+"% of GDP — the government's total borrowing requirement for the year. Strip out ₹"+f1(I)+" lakh crore of interest on past debt and the <b>primary deficit</b> is ₹"+f1(pd)+" lakh crore — "+(pd<0?"a primary <i>surplus</i>, meaning new borrowing is only to service old debt, which is stabilising for the debt ratio if growth exceeds the interest rate.":"today's genuinely expansionary stance, independent of the legacy interest bill.");
+  }
+  [rr,re,cr,ce,ii].forEach(function(x){x.addEventListener("input",draw)});draw();
+};
+
+/* ============ management theory picker ============ */
+SIMS.mgmt=function(host){
+  makeExplorer(host,"Theory → situation","pick a theory, see it applied",[
+   {t:"Maslow — hierarchy of needs",info:"Physiological → safety → social → esteem → self-actualisation, satisfied bottom-up. <b>Applied:</b> a new joiner worried about job security (safety) will not respond to a 'stretch assignment' pitch (self-actualisation) until the safety need is addressed."},
+   {t:"Herzberg — two-factor theory",info:"Hygiene (pay, conditions, policy) prevents dissatisfaction; motivators (achievement, recognition, growth) create satisfaction — separate axes. <b>Applied:</b> a team with competitive pay but flat roles is disengaged, not underpaid; the fix is job enrichment, not a raise."},
+   {t:"Vroom — expectancy theory",info:"Motivation = expectancy (can I do it) × instrumentality (will doing it be rewarded) × valence (do I value the reward). Any factor at zero collapses motivation. <b>Applied:</b> a high performer who believes rewards go by seniority regardless of effort has zero instrumentality — no amount of coaching on 'expectancy' will fix that."},
+   {t:"Adams — equity theory",info:"People compare their input-to-outcome ratio against a reference other's, not against an absolute standard. <b>Applied:</b> a raise can still trigger resignation if a peer received a larger one for similar work — perceived inequity, not absolute pay, drives the reaction."},
+   {t:"McGregor — Theory X / Theory Y",info:"X assumes workers are inherently unmotivated and need control; Y assumes they seek responsibility and self-direction. <b>Applied:</b> a manager who micromanages a capable team is likely acting on X assumptions the team's behaviour does not support."},
+   {t:"Situational leadership",info:"Hersey-Blanchard: leadership style should shift with follower <b>readiness</b> — telling, selling, participating, delegating. <b>Applied:</b> the same manager should direct a new analyst closely and delegate fully to a seasoned one on the same task."},
+   {t:"Transformational leadership",info:"Idealised influence, inspirational motivation, intellectual stimulation, individualised consideration — changes what followers want, not just what they do. <b>Applied:</b> a turnaround leader who gets a demoralised branch to take pride in service quality, not just hit targets, is leading transformationally."},
+   {t:"Corporate governance",info:"Addresses the <b>agency problem</b> between owners and managers through independent directors, board committees, disclosure and accountability. <b>Applied:</b> a bank whose board rubber-stamps management decisions with no independent challenge is a governance failure waiting to become a supervisory one."}
+  ]);
+};
+
+/* ============ current affairs bucket sim ============ */
+SIMS.ca=function(host){
+  simShell(host,"Sort the item","one line, one bucket, one question",
+   '<div class="row"><div><label>a news item</label><select class="ex"><option value="0">RBI raises risk weight on unsecured consumer credit</option><option value="1">MPC keeps repo unchanged at 5.25% for the third time</option><option value="2">PM-KISAN 18th instalment released</option><option value="3">New Deputy Governor appointed to the RBI</option><option value="4">CPI inflation for the month prints at 3.6%</option></select></div></div>'
+   +'<div class="dg bk"></div><div class="verdict vd"></div>');
+  var DATA_CA=[
+   {b:"Banking & financial",line:"RBI raised the risk weight on unsecured consumer credit exposures for banks and NBFCs.",q:"Which macroprudential tool did the RBI use to cool unsecured retail credit growth — a rate hike or a risk-weight increase?",a:"Risk-weight increase — it raises the capital cost of that lending category without moving the policy rate at all."},
+   {b:"Banking & financial",line:"The MPC held the repo rate at 5.25% for a third consecutive meeting, citing a data-dependent, neutral stance.",q:"What does a 'neutral' stance signal about the MPC's next move?",a:"No pre-committed direction — the next move depends on incoming inflation and growth data, not a bias to cut or hike."},
+   {b:"Schemes",line:"The 18th instalment of PM-KISAN, an income-support scheme for farmers, was released.",q:"Nodal ministry and the per-instalment amount?",a:"Ministry of Agriculture & Farmers Welfare; ₹2,000 per instalment, three times a year, ₹6,000 annually, transferred via DBT."},
+   {b:"Appointments",line:"A new Deputy Governor was appointed to the RBI's four-member Deputy Governor team.",q:"How many Deputy Governors does the RBI have, and by convention what are the typical portfolios?",a:"Up to four — conventionally covering monetary policy, banking regulation/supervision, currency management, and financial markets/payments, though exact allocation varies."},
+   {b:"Economy",line:"CPI (Combined) inflation printed at 3.6% for the month, inside the tolerance band and below the 4% target.",q:"Does a single low print change the inflation-targeting mandate?",a:"No — the mandate is a medium-term, average basis over the band; the MPC looks at the trajectory and core inflation, not one month's headline print."}
+  ];
+  var sel=$(".ex",host);
+  function draw(){
+    var d=DATA_CA[+sel.value];
+    $(".bk",host).innerHTML=["Banking & financial","Economy","Schemes","Appointments/awards/events","News-linked static"].map(function(b){
+      return '<span class="dgn '+(b===d.b?"ok":"off")+'">'+b+'</span>';
+    }).join("");
+    $(".vd",host).innerHTML="<b>One line:</b> "+d.line+"<br><b>Converted to a question:</b> "+d.q+"<br><b>Answer:</b> "+d.a;
+  }
+  sel.addEventListener("change",draw);draw();
+};
+
+/* ============ quant drill ============ */
+SIMS.quantdrill=function(host){
+  var BANK=[
+   {q:"18% of 250 =",a:45,h:"18% = 9/50 → 250×9/50=45"},
+   {q:"A number increased by 20% then decreased by 20% gives a net change of:",a:-4,h:"1.2×0.8=0.96 → −4%"},
+   {q:"₹8,000 at 10% p.a. compound interest for 2 years earns interest of:",a:1680,h:"8000×1.1²=9680 → interest 1680"},
+   {q:"Ratio 3:5 of a sum ₹640 gives the smaller share as:",a:240,h:"3/8 × 640 = 240"},
+   {q:"A train covers 300 km in 5 hours; its speed in km/h is:",a:60,h:"300÷5=60"},
+   {q:"If 12 workers finish a job in 15 days, 9 workers finish it in:",a:20,h:"12×15=180 man-days ÷9=20"},
+   {q:"Simple interest on ₹5,000 at 8% for 3 years:",a:1200,h:"5000×0.08×3=1200"},
+   {q:"Selling price ₹690 after a 15% loss means cost price was:",a:812,h:"690÷0.85≈811.76→₹812"}
+  ];
+  simShell(host,"Sixty-second drill","press check, don't overthink",
+   '<p class="qstem qd-q" style="margin-bottom:10px"></p>'
+   +'<div class="row"><div><input type="number" class="qd-in" placeholder="your answer" style="width:100%"></div><div><button class="btn fill qd-chk">Check</button></div><div><button class="btn qt qd-nx">New number →</button></div></div>'
+   +'<div class="verdict vd" style="margin-top:10px"></div>');
+  var i=0;
+  function draw(){
+    var b=BANK[i%BANK.length];
+    $(".qd-q",host).textContent=b.q;
+    $(".qd-in",host).value="";$(".vd",host).innerHTML="";
+  }
+  $(".qd-chk",host).addEventListener("click",function(){
+    var b=BANK[i%BANK.length],v=parseFloat($(".qd-in",host).value);
+    var ok=Math.abs(v-b.a)<0.5;
+    $(".vd",host).innerHTML=(ok?"<b style='color:var(--green)'>Correct.</b> ":"<b style='color:var(--rose)'>Not quite — answer is "+b.a+".</b> ")+b.h;
+  });
+  $(".qd-nx",host).addEventListener("click",function(){i++;draw()});
+  draw();
+};
+
+/* ============ syllogism trainer ============ */
+SIMS.syllo=function(host){
+  var SET=[
+   {s:["All pens are books.","Some books are red."],c:"Some pens are red.",v:false,e:"Does not follow. Pens sit fully inside books, but the 'red' books need not overlap the pen region — draw the diagram and the red circle can miss the pens entirely."},
+   {s:["All pens are books.","Some books are red."],c:"Some books are pens.",v:true,e:"Follows. 'All pens are books' places the whole pen circle inside books, so at least some books (the pens) are pens — the valid converse of a universal affirmative."},
+   {s:["No cats are birds.","All birds are pets."],c:"No cats are pets.",v:false,e:"Does not follow. Cats and birds are disjoint, but cats could still overlap the pet circle through some other route — the diagram allows cats to be pets too."},
+   {s:["Some doctors are teachers.","All teachers are readers."],c:"Some doctors are readers.",v:true,e:"Follows. The doctors who are teachers are, by the second statement, also readers — a valid chain through the overlapping group."},
+   {s:["All A are B.","All B are C."],c:"All A are C.",v:true,e:"Follows. A transitive chain of two universal affirmatives always gives a universal affirmative conclusion."},
+   {s:["All A are B.","No B are C."],c:"No A are C.",v:true,e:"Follows. Since every A is inside B, and B is entirely outside C, A cannot touch C either."}
+  ];
+  simShell(host,"Does it follow?","diagram it before you answer",
+   '<p class="qstem sy-s" style="margin-bottom:8px"></p><p class="qstem sy-c" style="color:var(--gold);font-weight:600;margin-bottom:12px"></p>'
+   +'<div class="row-cta"><button class="btn fill sy-y">Follows</button><button class="btn sy-n">Does not follow</button><button class="btn qt sy-nx">Skip →</button></div>'
+   +'<div class="verdict vd" style="margin-top:10px"></div>');
+  var i=0;
+  function draw(){
+    var d=SET[i%SET.length];
+    $(".sy-s",host).innerHTML=d.s.join("<br>");
+    $(".sy-c",host).textContent="Conclusion: "+d.c;
+    $(".vd",host).innerHTML="";
+  }
+  function answer(v){
+    var d=SET[i%SET.length],ok=v===d.v;
+    $(".vd",host).innerHTML=(ok?"<b style='color:var(--green)'>Correct — it "+(d.v?"follows":"does not follow")+".</b> ":"<b style='color:var(--rose)'>Not quite — it "+(d.v?"actually follows":"actually does not follow")+".</b> ")+d.e;
+  }
+  $(".sy-y",host).addEventListener("click",function(){answer(true)});
+  $(".sy-n",host).addEventListener("click",function(){answer(false)});
+  $(".sy-nx",host).addEventListener("click",function(){i++;draw()});
+  draw();
+};
+
+/* ============ essay structure ============ */
+SIMS.essay=function(host){
+  makeStepper(host,"The essay skeleton","structure first, then fill it in",[
+   ["Introduction · 2-3 sentences","Define the key term precisely, then state your line of argument","~10% of length"],
+   ["Body para 1","One idea, one piece of evidence (a number or a named policy), one linking sentence","~20%"],
+   ["Body para 2","A second, distinct idea — do not restate paragraph 1 in different words","~20%"],
+   ["Body para 3","The counter-argument, stated fairly — this is what separates a balanced answer from a one-sided one","~20%"],
+   ["Body para 4 (optional)","A synthesis or an Indian-specific angle that ties the first three together","~15%"],
+   ["Conclusion","Resolve, don't repeat — end with a forward-looking policy point, not a summary","~15%"]
+  ],[
+   "Six blocks. Time-box each one before you start writing — two minutes of planning saves ten minutes of a wandering answer.",
+   "State what the question is actually asking in your own words before you argue anything. An examiner rewards precision here more than eloquence.",
+   "This paragraph should be able to stand alone as an answer to 'give one reason for X'. If it needs the next paragraph to make sense, it is not one idea.",
+   "Same test: a self-contained second reason, ideally from a different angle — economic versus social, short-run versus long-run, efficiency versus equity.",
+   "This is the highest-value paragraph for a judgement-testing exam. An examiner who sees only one side stops trusting the rest of the essay, however well argued.",
+   "If you have room, this is where an ESI or FM concept applied to a live Indian example earns real marks — it shows synthesis, not recall.",
+   "Do not write 'in conclusion, X is important'. Instead, say what should happen next — a policy direction, a trade-off to manage, a watch-point."
+  ],"Build the essay");
+};
+
+/* ============ 90-min block ============ */
+SIMS.block=function(host){
+  var seg=[["Core reading",50,"var(--green)"],["Disha PYQs",20,"var(--gold)"],["Closed-book recall",15,"var(--blue)"],["Current affairs",5,"var(--rose)"]];
+  var h='<div style="display:flex;height:34px;border-radius:9px;overflow:hidden;border:1px solid var(--line)">';
+  seg.forEach(function(s){h+='<div style="width:'+(s[1]/90*100)+'%;background:'+s[2]+';opacity:.85"></div>'});
+  h+='</div><div class="ro-wrap" style="margin-top:12px">';
+  seg.forEach(function(s){h+='<div class="ro"><div class="v" style="color:'+s[2]+'">'+s[1]+'m</div><div class="k">'+s[0]+'</div></div>'});
+  h+='</div><p class="simnote" style="margin-top:10px">Weekday shape. Saturday: 45 revision · 30 PYQs · 15 error notebook. Sunday: 45 test · 30 analysis · 15 whole-week recall. Ninety minutes, every day, adds up to roughly 547 hours across a year.</p>';
+  host.innerHTML=h;
+};
+</script>
+<script>
+route();
+var cb=null;
+try{var last=store("rbi-last");if(last&&last!=="#/"){}}catch(e){}
+</script>
+</body>
+</html>
