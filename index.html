@@ -298,7 +298,8 @@ h1.pg{font-size:clamp(30px,5vw,46px);margin:.1em 0 .25em}
   <div class="hd-in">
     <a class="mark" href="#/">The <i>Corridor</i></a>
     <div class="hd-links">
-      <a href="#/" data-nav="home">Syllabus</a>
+      <a href="#/" data-nav="home">Home</a>
+      <a href="#/contents" data-nav="contents" data-h>Full contents</a>
       <a href="#/pyq" data-nav="pyq" data-h>PYQ bank</a>
       <a href="#/tests" data-nav="tests" data-h>Tests</a>
       <a href="#/plan" data-nav="plan" data-h>Study plan</a>
@@ -329,6 +330,7 @@ h1.pg{font-size:clamp(30px,5vw,46px);margin:.1em 0 .25em}
 <main class="page" id="p-tracker"><div class="wrap" id="trk-in"></div></main>
 <main class="page" id="p-plan"><div class="wrap" id="plan-in"></div></main>
 <main class="page" id="p-books"><div class="wrap" id="books-in"></div></main>
+<main class="page" id="p-contents"><div class="wrap" id="contents-in"></div></main>
 
 <footer class="ft">
   <div class="wrap">
@@ -620,6 +622,97 @@ var DATA=[
    {q:"Concessional lending to the poorest countries is the mandate of:",o:["IBRD","IDA","IFC","MIGA"],a:1,e:"IDA lends on highly concessional terms; IBRD lends to creditworthy middle-income countries."},
    {q:"Which currency is NOT in the SDR basket?",o:["Chinese renminbi","Japanese yen","Swiss franc","Pound sterling"],a:2,e:"The basket is USD, EUR, CNY, JPY and GBP."},
    {q:"A customs union differs from a free trade area because it has:",o:["Free movement of labour","A common external tariff","A single currency","Fiscal transfers"],a:1,e:"The common external tariff is the defining feature; factor mobility marks a common market."}]}
+ ]},
+
+ {id:"e6",n:"Chapter 6",name:"Money, banking evolution and financial reform",
+  intro:"Ramesh Singh spends real weight on how India's money and banking system got to its present shape, and interviewers use that history to test whether you understand banking as more than a list of current rules. This chapter is the 'how we got here' that chapters 2 and 3 of Finance & Management assume you already know.",
+  topics:[
+
+  {id:"moneyfn",n:"What money does, and how Indian banking evolved",sim:"bankhist",
+   html:`<p>Before institutions, get the function right. Money is anything that performs four roles: a <b>medium of exchange</b> (removing the double-coincidence-of-wants problem barter had), a <b>unit of account</b> (a common yardstick for value), a <b>store of value</b> (wealth held across time — which is why high inflation erodes money's usefulness), and a <b>standard of deferred payment</b> (the basis on which loans and credit are written). A textbook line worth having ready: money is only as good as the fourth function during high inflation, because nobody wants to lend in a unit that is losing value.</p>
+   <p>India's banking history moves in five recognisable phases, and placing any current question in this arc is an easy way to sound prepared. Step through it below.</p>
+   @SIM@
+   <p>Two structural facts fall out of this history and are asked constantly. First, the <b>1969 and 1980 nationalisations</b> were about directing credit toward priority sectors and rural India, not about profitability — which is exactly the policy tension priority sector lending norms still carry today. Second, the <b>1991-93 reforms</b> (guided by the first Narasimham Committee) reversed the direction: from directed credit toward prudential regulation, competition and capital adequacy — the frame this whole chapter and Finance & Management's chapter 3 build on.</p>`,
+   keys:["Money's four functions: medium of exchange, unit of account, store of value, standard of deferred payment","1969 (14 banks) and 1980 (6 banks) nationalisation: directed credit to priority sectors, not profit","1991-93: Narasimham-I reversed direction — toward prudential norms, competition, capital adequacy","Financial repression before 1991: high CRR/SLR, administered interest rates, directed credit"],
+   pyq:[{q:"Why were banks nationalised in 1969, and why did policy reverse course in 1991? (ESI/FM descriptive)",a:"1969: to direct credit toward agriculture, small industry and priority sectors that private, profit-driven banks were neglecting — social banking over commercial banking. By the late 1980s this produced financial repression: banks holding excessive low-yield government paper via CRR/SLR, weak balance sheets, and credit allocated by directive rather than appraisal. The 1991 crisis forced a rethink, and Narasimham-I (1991) recommended reducing CRR/SLR over time, freeing interest rates, strengthening capital adequacy and asset classification, and allowing new private banks — trading social-banking reach for banking-sector health, with priority sector lending retained but bounded.",tag:"ESI/FM · descriptive"}],
+   quiz:[
+   {q:"Which function of money is most damaged by high inflation?",o:["Medium of exchange","Standard of deferred payment","Unit of account only","None — inflation does not affect money's functions"],a:1,e:"High inflation erodes money's usefulness as a store of value and as the basis for long-term contracts (standard of deferred payment) most severely."},
+   {q:"The second phase of bank nationalisation (1980) brought how many banks under government ownership?",o:["6","14","20","2"],a:0,e:"14 banks were nationalised in 1969, 6 more in 1980, taking the public sector's share of banking deposits to over 90% at the peak."},
+   {q:"The first Narasimham Committee (1991) is chiefly associated with:",o:["Inflation targeting","Reducing CRR/SLR and strengthening prudential norms","Introducing GST","Creating SEBI"],a:1,e:"It set the post-1991 banking reform agenda: lower statutory pre-emptions, capital adequacy, asset classification and new private bank entry."}]},
+
+  {id:"reform2",n:"Financial sector reform committees",sim:"reformcomm",
+   html:`<p>A short list of committees does most of the work here, and examiners reliably ask "which committee recommended X" — so the discipline is matching committee to recommendation, not memorising biographies.</p>
+   <div class="tw"><table class="t"><thead><tr><th>Committee</th><th>Core recommendation</th></tr></thead><tbody>
+   <tr><td>Narasimham-I (1991)</td><td>Reduce CRR/SLR, free interest rates, capital adequacy and asset classification norms, permit new private banks</td></tr>
+   <tr><td>Narasimham-II (1998)</td><td>Stronger capital norms, a push toward merging weak banks into strong ones, an asset reconstruction mechanism for bad loans</td></tr>
+   <tr><td>Verma Committee (1999)</td><td>A restructuring framework for weak public sector banks</td></tr>
+   <tr><td>Raghuram Rajan Committee (2009)</td><td>Financial sector reform agenda — recommended what became the FSDC, and pushed for more competition and financial inclusion</td></tr>
+   <tr><td>Nachiket Mor Committee (2013)</td><td>Universal financial inclusion — recommended Payments Banks and Small Finance Banks</td></tr>
+   <tr><td>P J Nayak Committee (2014)</td><td>Governance of public sector banks — recommended a Bank Investment Company to hold government stakes at arm's length</td></tr>
+   <tr><td>Urjit Patel Committee (2014)</td><td>Monetary policy framework — CPI as the nominal anchor, a Monetary Policy Committee</td></tr>
+   </tbody></table></div>
+   @SIM@
+   <p>Two things separate a strong answer from a list. First, note the <b>direction of travel</b>: from directed credit (pre-1991) to prudential soundness (Narasimham) to inclusion (Rajan, Mor) to governance (Nayak) to a rules-based monetary framework (Patel) — each committee answers the failure mode of its moment. Second, the <b>Nayak Committee's core diagnosis</b> is worth a sentence of its own: government ownership itself was identified as a governance constraint, because a PSB board answers to a ministry as much as to shareholders, which limits professional, arm's-length management — a genuinely debated point, not a settled one.</p>`,
+   keys:["Narasimham-I: prudential norms and entry. Narasimham-II: capital, mergers, bad-loan mechanism","Nachiket Mor → Payments Banks and Small Finance Banks; Rajan Committee → the frame behind FSDC","P J Nayak: PSB governance constrained by government ownership itself — proposed a holding company","Urjit Patel: the committee behind CPI inflation targeting and the MPC"],
+   pyq:[{q:"What did the Nayak Committee identify as the core governance problem in public sector banks?",a:"That government ownership itself constrains governance: PSB boards answer to the ministry of finance as much as to minority shareholders, appointments and compensation are constrained by government service rules, and boards lack the professional independence private bank boards have. Its proposed fix — a Bank Investment Company holding government stakes at arm's length, insulating banks from day-to-day government direction — has not been implemented, which is itself a fact worth knowing: recommend, don't assume adopted.",tag:"FM · descriptive"}],
+   quiz:[
+   {q:"Payments Banks and Small Finance Banks were recommended by:",o:["Narasimham-II","Nachiket Mor Committee","P J Nayak Committee","Bimal Jalan Committee"],a:1,e:"The Nachiket Mor Committee on comprehensive financial inclusion, 2013-14."},
+   {q:"The Urjit Patel Committee's recommendation became statutory via:",o:["The Banking Regulation Act","The 2016 amendment to the RBI Act","FRBM 2003","SARFAESI 2002"],a:1,e:"The amendment gave the RBI Act a statutory inflation target and created the Monetary Policy Committee."},
+   {q:"The P J Nayak Committee's proposed Bank Investment Company was intended to:",o:["Recapitalise banks directly","Hold government's bank stakes at arm's length from day-to-day management","Merge all public sector banks into one","Replace the RBI as regulator"],a:1,e:"An arm's-length holding structure to insulate PSB boards from direct government control — proposed, not implemented."}]},
+
+  {id:"capform",n:"Savings, investment and capital formation",
+   html:`<p>Growth needs capital, and capital comes from someone deferring consumption. The identity worth having on hand: <b>domestic saving plus net capital inflow from abroad equals domestic investment</b> — which is exactly why a current account deficit (net capital inflow, by definition) can fund investment beyond what domestic saving alone would allow, and exactly why it must eventually be repaid.</p>
+   <p>India's savings are conventionally split three ways: <b>household</b> saving (the largest share, itself split between financial assets — deposits, insurance, mutual funds, pension — and physical assets like gold and real estate), <b>private corporate</b> saving (retained earnings), and <b>public</b> saving (government revenue surplus, structurally weak in India because of persistent revenue deficits, discussed in Finance & Management chapter 5).</p>
+   <p>The policy story of the last decade is the <b>financialisation of household savings</b> — a gradual shift from physical assets (gold, real estate) toward financial assets (mutual funds, insurance, pensions, direct equity), driven by digital access, demonetisation's push toward formal channels, and rising financial literacy. This matters because financial saving is what banks and markets can actually deploy into productive investment; gold sitting in a locker cannot fund a factory. Government schemes read against this backdrop make more sense: <b>Jan Dhan</b> accounts, <b>APY</b> (Atal Pension Yojana) for informal-sector old-age security, and mutual fund SIP growth are all instances of the same underlying shift.</p>
+   <p>On the investment side, the <b>capital-output ratio</b> — how much investment it takes to generate one unit of additional output — is the concept examiners reach for to discuss efficiency. A rising incremental capital-output ratio (ICOR) means the same investment is generating less growth, a sign of inefficiency worth naming when asked why growth has slowed despite a stable investment rate.</p>`,
+   keys:["Domestic saving + net capital inflow = domestic investment — the identity behind CAD-financed growth","Household, private corporate and public saving; public saving structurally weak from revenue deficits","Financialisation: households shifting from gold/real estate toward mutual funds, insurance, pensions","ICOR rising = same investment buying less growth — the standard efficiency diagnostic"],
+   pyq:[{q:"What is meant by the 'financialisation' of Indian household savings, and why does it matter for growth?",a:"A structural shift in how households hold their savings — away from physical assets like gold and real estate, toward financial instruments like bank deposits, mutual funds, insurance and pension products. It matters because financial savings are intermediated by banks and markets into productive investment, while physical savings largely sit idle from the economy's point of view. Drivers include digital financial access, demonetisation, rising equity culture and financial literacy campaigns; the policy takeaway is that deepening financial inclusion is also a growth lever, not only an equity one.",tag:"ESI · descriptive"}],
+   quiz:[
+   {q:"The identity linking saving, investment and the external account is:",o:["Saving = Investment always, with no external role","Domestic saving + net capital inflow = domestic investment","Investment = Government spending","Saving = Tax revenue"],a:1,e:"This is why a current account deficit (a net capital inflow) can finance investment beyond domestic saving."},
+   {q:"India's public saving has structurally been weak mainly because of:",o:["High household gold demand","Persistent revenue deficits","Low corporate profitability","High foreign reserves"],a:1,e:"A revenue deficit means the government dis-saves — spending exceeds its revenue receipts even before capital spending is considered."},
+   {q:"A rising Incremental Capital-Output Ratio (ICOR) indicates:",o:["Investment is becoming more efficient","The same investment is generating less additional output","Savings are rising","Inflation is falling"],a:1,e:"ICOR rising is the standard shorthand for declining investment efficiency."}]}
+ ]},
+
+ {id:"e7",n:"Chapter 7",name:"Government finance, schemes and the Union Budget",
+  intro:"Where ESI meets current affairs most directly. The Budget and the major schemes are asked every year in some form, and the discipline that scores marks is the same one from the study-plan notes: extract numbers, objectives and the nodal ministry — don't try to memorise the document.",
+  topics:[
+
+  {id:"budgetproc",n:"The Union Budget: process, documents and vocabulary",sim:"budgetflow",
+   html:`<p>The Budget is a constitutional requirement — Article 112's <b>Annual Financial Statement</b> — not just an economic event, and knowing the process end to end is a frequently asked sequence.</p>
+   @SIM@
+   <p>The document set is worth being able to name precisely: the <b>Annual Financial Statement</b> (receipts and expenditure), the <b>Finance Bill</b> (tax proposals, needs Parliament's approval to take effect), the <b>Demands for Grants</b> (ministry-wise spending requests, voted on individually), the <b>Macro-Economic Framework Statement</b, and the <b>Expenditure Budget</b> and <b>Receipt Budget</b> giving the detailed breakdown. Since 2017, the <b>Railway Budget</b> has been merged into the general Budget, and the date moved from the last day of February to <b>1 February</b>, giving ministries a full quarter to prepare before the financial year starts on 1 April.</p>
+   <p>Vocabulary that shows up in objective questions: <b>Vote on Account</b> (interim spending authorisation when the full Budget isn't passed before 1 April, common in election years), the <b>Consolidated Fund of India</b> (all revenues and loans — nothing is withdrawn without parliamentary authorisation), the <b>Contingency Fund</b> (an emergency corpus the President can draw on, replenished afterward by Parliament), and the <b>Public Account</b> (money the government holds as a banker — provident funds, small savings — not really its own).</p>
+   <p>Expenditure is classified two ways, and mixing them up is a common error. <b>Revenue vs capital</b> (does it create an asset — covered in Finance & Management chapter 5) is one axis. <b>Plan vs non-plan</b> was the other, officially <b>abolished from 2017-18</b> in favour of revenue-vs-capital alone — a "was true, now isn't" fact examiners like to test.</p>`,
+   keys:["Article 112: the Annual Financial Statement, presented 1 February since 2017","Consolidated Fund (needs Parliament's OK) vs Contingency Fund (emergency, replenished after) vs Public Account (money held in trust)","Plan/non-plan classification abolished 2017-18; revenue/capital is now the only expenditure split","Vote on Account: interim spending power before the full Budget is passed"],
+   pyq:[{q:"Distinguish the Consolidated Fund, the Contingency Fund and the Public Account.",a:"The Consolidated Fund of India holds all government revenues, loans raised and loan repayments received; no money can be withdrawn from it without Parliament's authorisation — this is where the Budget's expenditure is voted from. The Contingency Fund is a standing emergency corpus at the President's disposal for unforeseen expenditure, used first and regularised by Parliament afterward. The Public Account holds money where the government acts as a banker or trustee — provident fund balances, small savings collections — which is not really the government's own money and doesn't need a vote to be paid out again.",tag:"ESI · descriptive"}],
+   quiz:[
+   {q:"The Union Budget is presented under which constitutional article?",o:["Article 110","Article 112","Article 280","Article 265"],a:1,e:"Article 112 mandates the Annual Financial Statement; Article 110 defines a Money Bill; Article 265 says no tax without law."},
+   {q:"Since 2017-18, government expenditure is classified as:",o:["Plan and non-plan","Revenue and capital only","Voted and charged only","Budgeted and off-budget"],a:1,e:"The plan/non-plan distinction was abolished; revenue-vs-capital is now the sole formal classification, alongside the separate voted/charged distinction."},
+   {q:"A Vote on Account is used when:",o:["The Budget deficit exceeds FRBM limits","The full Budget has not been passed before the new financial year begins","GST collections fall short","The Finance Bill is rejected"],a:1,e:"It authorises interim spending, typically for two months, most often needed in election years when the full Budget process is delayed."}]},
+
+  {id:"schemes",n:"Major government schemes",sim:"schemeexp",
+   html:`<p>Scheme questions reward the same four facts every time: <b>what it does, which ministry runs it, roughly what it costs or reaches, and one live criticism</b>. Click through a representative set below, then apply the same four-fact discipline to whatever scheme current affairs throws at you.</p>
+   @SIM@
+   <p>Group schemes mentally by the problem they solve rather than trying to memorise them alphabetically — <b>income and welfare support</b> (PM-KISAN, PDS/NFSA, MGNREGA), <b>financial inclusion</b> (Jan Dhan, APY, PMJJBY/PMSBY insurance), <b>health</b> (Ayushman Bharat/PM-JAY, the health and wellness centres), <b>housing and infrastructure</b> (PMAY, Jal Jeevan Mission), and <b>industry and employment</b> (PLI schemes, Skill India, Startup India). That grouping is itself a good structure for a descriptive answer on "government's approach to X".</p>
+   <p>The design pattern worth flagging across nearly all recent schemes: <b>DBT as the default delivery mechanism</b>, built on the JAM trinity from Finance & Management's financial inclusion topic. Naming that connection — "this scheme, like most since 2014, delivers via direct benefit transfer into a Jan Dhan-linked account, reducing leakage relative to the old subsidy-in-kind model" — is a sentence that answers several different scheme questions at once.</p>`,
+   keys:["Four facts per scheme: what it does, nodal ministry, scale, one criticism","Group by problem solved, not alphabetically — welfare, inclusion, health, housing, industry","DBT via JAM trinity is the common delivery mechanism across most post-2014 schemes","A scheme question is usually really a policy-design question in disguise"],
+   pyq:[{q:"How has the design of welfare delivery changed in India over the last decade?",a:"From subsidised goods delivered in kind or through price control (the ration shop model, fertiliser subsidy embedded in price) toward direct benefit transfer into bank accounts, enabled by the JAM trinity. The claimed gains: reduced leakage and ghost beneficiaries, faster and more transparent delivery, and better targeting through Aadhaar-linked de-duplication. The genuine critique: exclusion errors when Aadhaar authentication fails or connectivity is poor, and DBT alone doesn't fix supply-side problems — a cash transfer doesn't build a hospital. A balanced answer credits the leakage reduction while naming the exclusion-error and supply-side critique.",tag:"ESI · descriptive"}],
+   quiz:[
+   {q:"PM-KISAN is administered by which ministry, and what does it provide?",o:["Ministry of Rural Development; employment guarantee","Ministry of Agriculture & Farmers Welfare; ₹6,000/year income support","Ministry of Finance; crop insurance","Ministry of Consumer Affairs; foodgrain subsidy"],a:1,e:"₹6,000 a year in three instalments, transferred via DBT to land-owning farmer families."},
+   {q:"Ayushman Bharat PM-JAY provides health cover of what amount per family per year?",o:["₹1 lakh","₹5 lakh","₹10 lakh","Unlimited"],a:1,e:"₹5 lakh per family per year for secondary and tertiary hospitalisation, targeted at the bottom 40% by the SECC database."},
+   {q:"The common delivery mechanism across most post-2014 welfare schemes is:",o:["Ration shops","Direct Benefit Transfer via the JAM trinity","State-run cooperatives","Employer-linked disbursal"],a:1,e:"DBT into Jan Dhan/Aadhaar-linked bank accounts is now the default delivery rail."}]},
+
+  {id:"socsec",n:"Social sector: health, education and human capital",
+   html:`<p>Growth without human capital investment is the setup for §1.2's "growth versus development" question in a different costume, and examiners like to test it with numbers. India's public spending on health and education has historically sat below the levels comparable-income countries commit, and the gap shows up directly in outcomes — stunting and wasting rates, learning-outcome surveys, and out-of-pocket health expenditure that pushes households into poverty.</p>
+   <p>On <b>health</b>: know the architecture — Health and Wellness Centres under Ayushman Bharat for primary care, PM-JAY for hospitalisation cover, and the National Health Policy's stated (not yet reached) target of raising public health spending toward 2.5% of GDP. <b>Out-of-pocket expenditure</b> — the share of health costs households pay directly, uninsured — is the single statistic that best captures India's health-financing problem, because it is both a poverty driver (catastrophic health spending) and a symptom of thin public and insurance coverage.</p>
+   <p>On <b>education</b>: the <b>National Education Policy 2020</b> replaced a 34-year-old policy and is asked in outline form — a 5+3+3+4 structure replacing 10+2, multiple entry-exit in higher education, a push for mother-tongue instruction in early years, and a stated target of 6% of GDP on education (again, aspirational, not yet reached). Learning-outcome data — surveys repeatedly showing large shares of school-age children unable to do grade-level reading or arithmetic — is the evidence base for why "enrolment is not the same as education," a distinction worth drawing explicitly, since India has succeeded at getting children into school (enrolment near-universal at the primary level) far more than at ensuring they learn while there.</p>
+   <p>The through-line for a strong answer: distinguish <b>access</b> (are children enrolled, is a hospital nearby) from <b>quality</b> (are they learning, is the care effective) and from <b>financial protection</b> (does a health shock impoverish the family) — three different failure modes needing three different policy instruments, which is exactly the kind of structured answer this chapter rewards.</p>`,
+   keys:["Out-of-pocket health expenditure is the key statistic for India's health-financing problem","NEP 2020: 5+3+3+4 structure, multiple entry-exit, mother-tongue early instruction, 6% of GDP target","Distinguish access, quality and financial protection — three different failure modes","Enrolment is near-universal; learning outcomes are the persistent gap"],
+   pyq:[{q:"'India has solved school enrolment but not school learning.' Discuss.",a:"Evidence for: primary enrolment rates are near-universal and gender gaps have narrowed sharply; the access problem is largely solved. Evidence for a learning gap: repeated large-scale learning assessments show substantial shares of upper-primary students unable to read a lower-grade text or do basic arithmetic — a foundational learning crisis, worsened by pandemic-era school closures. Causes: teacher shortages and absenteeism, large pupil-teacher ratios in some states, assessment systems that promote by age rather than mastery, and weak early-childhood foundations. Policy response: NEP 2020's emphasis on foundational literacy and numeracy (the NIPUN Bharat mission) is the direct answer to this diagnosis — cite it to show the policy connects to the problem.",tag:"ESI · descriptive"}],
+   quiz:[
+   {q:"NEP 2020 replaced the 10+2 schooling structure with:",o:["8+4","5+3+3+4","6+6","4+4+4+4"],a:1,e:"5 (foundational) + 3 (preparatory) + 3 (middle) + 4 (secondary), aligning school stages with developmental stages rather than a flat 10+2."},
+   {q:"The single statistic most commonly cited to describe India's health-financing problem is:",o:["Life expectancy","Out-of-pocket expenditure as a share of health spending","Number of hospitals","Doctor-to-population ratio only"],a:1,e:"High out-of-pocket spending is both a symptom of thin insurance/public coverage and a direct driver of poverty via catastrophic health costs."},
+   {q:"NEP 2020's stated (aspirational) target for public education spending is:",o:["2% of GDP","4% of GDP","6% of GDP","10% of GDP"],a:2,e:"6% of GDP — a long-standing target first proposed in the 1960s, not yet achieved."}]}
  ]}
 ]},
 {id:"fm",name:"Finance & Management",tag:"Phase II · Paper III · 100 marks",
@@ -655,7 +748,64 @@ var DATA=[
    quiz:[
    {q:"Payments Banks are permitted to:",o:["Lend to small businesses","Accept deposits up to a per-customer limit and offer payment services","Issue credit cards","Underwrite securities"],a:1,e:"No lending and no credit cards; deposits are capped and must largely be parked in government securities."},
    {q:"Small Finance Banks must meet a priority sector lending target of:",o:["40%","50%","75%","100%"],a:2,e:"75% of adjusted net bank credit, against 40% for universal banks."},
-   {q:"The 'JAM' trinity refers to:",o:["Jan Dhan, Aadhaar, Mobile","Jobs, Assets, Money","Jan Dhan, Ayushman, MUDRA","Justice, Access, Markets"],a:0,e:"The identity-account-mobile combination that made Direct Benefit Transfer feasible at scale."}]}
+   {q:"The 'JAM' trinity refers to:",o:["Jan Dhan, Aadhaar, Mobile","Jobs, Assets, Money","Jan Dhan, Ayushman, MUDRA","Justice, Access, Markets"],a:0,e:"The identity-account-mobile combination that made Direct Benefit Transfer feasible at scale."}]},
+
+  {id:"bankstruct",n:"Banking structure in India",sim:"bankstruct",
+   html:`<p>"Bank" covers a wide family in India, and the exam expects you to place any named institution into the right branch of it — this is one of the most reliable objective-question templates in the whole syllabus. Click through the structure below.</p>
+   @SIM@
+   <p>The most important line to get exactly right: a <b>scheduled bank</b> is one included in the Second Schedule of the RBI Act — meeting minimum capital and other RBI conditions — which entitles it to borrow from the RBI at the bank rate and access clearing-house facilities. Most banks Indians deal with day to day are scheduled; the "non-scheduled" category is now small and mostly historical in exam relevance. Do not confuse "scheduled" with "public sector" — the axes are independent: a private bank is scheduled too.</p>
+   <p><b>Regional Rural Banks</b> deserve their own line because they are a distinct hybrid: jointly owned by the Central Government (50%), the sponsor public sector bank (35%) and the state government (15%), created in 1975 specifically to combine a cooperative bank's local reach with a commercial bank's professionalism, serving rural and semi-urban credit needs. <b>Cooperative banks</b> are a separate universe again — urban and rural, with a history of dual regulation (RBI for banking functions, state Registrars of Cooperative Societies for management) that produced governance gaps, which is why the <b>Banking Regulation (Amendment) Act, 2020</b> brought urban and multi-state cooperative banks more fully under RBI's prudential supervision after high-profile cooperative bank failures.</p>`,
+   keys:["Scheduled = in the RBI Act's Second Schedule → access to RBI credit and clearing; independent of ownership type","RRBs: 50% Centre, 35% sponsor bank, 15% state — created 1975 to blend local reach with commercial discipline","Cooperative banks had dual regulation (RBI + state Registrar) until the 2020 amendment brought them under fuller RBI supervision","Public/private/foreign/RRB/cooperative/SFB/payments bank are independent categories from scheduled/non-scheduled"],
+   pyq:[{q:"Why were urban cooperative banks brought under stricter RBI supervision in 2020?",a:"Cooperative banks historically had dual regulation — the RBI oversaw banking functions like licensing and prudential norms, while state Registrars of Cooperative Societies oversaw management, audits and elections to the board. This split accountability left gaps: boards were not always professionally qualified, and RBI's supervisory powers over management and governance were weaker than over commercial banks. A series of urban cooperative bank failures and frauds exposed this gap, leading to the Banking Regulation (Amendment) Act, 2020, which extended RBI's powers over cooperative banks' management, audit, and resolution — narrowing but not fully eliminating the dual-regulation structure.",tag:"FM · descriptive"}],
+   quiz:[
+   {q:"A 'scheduled' bank is one that:",o:["Is government-owned","Is listed in the Second Schedule of the RBI Act","Operates only in one state","Has no minimum capital requirement"],a:1,e:"Scheduled status is about inclusion in the RBI Act's schedule, giving access to RBI refinance and clearing — independent of public/private ownership."},
+   {q:"In a Regional Rural Bank's ownership, the sponsor bank typically holds:",o:["15%","35%","50%","100%"],a:1,e:"Centre 50%, sponsor public sector bank 35%, state government 15%."},
+   {q:"The Banking Regulation (Amendment) Act, 2020 primarily strengthened RBI's oversight of:",o:["Foreign banks","Urban and multi-state cooperative banks","NBFCs","Payments banks"],a:1,e:"It closed part of the dual-regulation gap that had let cooperative bank governance problems go unaddressed."}]},
+
+  {id:"insurance",n:"Insurance: life, general and regulation",
+   html:`<p>Insurance pools risk across many people so that an individual's rare, large loss becomes a small, predictable premium for everyone — the same risk-transfer function that makes it a pillar of the financial system alongside banking and capital markets.</p>
+   <p><b>Life insurance</b> covers mortality risk and increasingly doubles as a savings and investment vehicle (endowment and unit-linked plans); <b>general insurance</b> covers non-life risks — motor, health, fire, marine, crop. India's sector was nationalised in stages (life insurance in 1956, forming LIC; general insurance in 1972, forming GIC and four subsidiaries), then reopened to private and foreign participation from 2000 following the <b>Malhotra Committee's</b> recommendations — the committee to name if asked who opened up insurance.</p>
+   <p>The regulator is the <b>IRDAI</b>, set up in 1999, mandated to protect policyholders while promoting orderly growth — the same investor-protection-and-development dual mandate SEBI carries for securities. Two numbers worth having ready: <b>insurance penetration</b> (premium as a share of GDP) and <b>insurance density</b> (premium per capita) are the standard measures of how deep the sector runs in an economy, and India scores well on the number of policies relative to penetration by value — reflecting a market still dominated by smaller-ticket products relative to advanced economies.</p>
+   <p>Two government interventions are frequently tested. <b>PMFBY</b> (Pradhan Mantri Fasal Bima Yojana) is crop insurance with a low, uniform farmer premium and the rest subsidised, addressing the specific problem that private crop insurance struggles to price weather-correlated risk profitably. <b>PMJJBY and PMSBY</b> are near-zero-premium life and accident cover schemes aimed at extending insurance to the financially excluded — a direct extension of the JAM/financial-inclusion agenda from the previous topic into the insurance space.</p>`,
+   keys:["Life insurance nationalised 1956 (LIC); general insurance 1972 (GIC); reopened to private entry 2000 on Malhotra Committee's recommendation","IRDAI (1999): protect policyholders while promoting orderly sector growth — SEBI's dual mandate, mirrored","Penetration = premium/GDP; density = premium per capita — the two standard depth measures","PMFBY, PMJJBY, PMSBY extend the financial-inclusion agenda into crop, life and accident insurance"],
+   pyq:[{q:"What did the Malhotra Committee recommend, and why does crop insurance need a government subsidy to work?",a:"The Malhotra Committee (1994) recommended ending the LIC/GIC monopoly and opening insurance to private and foreign players under an independent regulator — leading to IRDAI's creation in 1999 and sector opening from 2000. On crop insurance: weather risk is spatially correlated — a drought does not strike one random farmer, it strikes a whole region at once, which is the opposite of the diversifiable risk insurance is designed to pool. Private insurers price that correlated risk high or avoid it; PMFBY addresses this by having the government absorb the bulk of the premium and reinsurance risk, keeping the farmer's share low and roughly uniform across crops and regions.",tag:"FM · descriptive"}],
+   quiz:[
+   {q:"India's insurance sector was reopened to private participation following the recommendations of:",o:["Narasimham Committee","Malhotra Committee","Nachiket Mor Committee","Rajan Committee"],a:1,e:"The Malhotra Committee, 1994, leading to IRDAI's creation in 1999 and sector opening from 2000."},
+   {q:"'Insurance penetration' is measured as:",o:["Number of policies sold","Premium as a share of GDP","Number of insurers in the market","Claims settled per year"],a:1,e:"Penetration = total premium ÷ GDP; density = premium per capita — two different depth measures, easy to swap by mistake."},
+   {q:"PMFBY addresses which specific market failure?",o:["Adverse selection in health insurance","Spatially correlated weather risk that private insurers price too high or avoid","Moral hazard in motor insurance","Low life expectancy"],a:1,e:"Correlated risk (a drought hits a whole region, not one random policyholder) is what makes crop insurance hard for private markets to price without government support."}]},
+
+  {id:"mf",n:"Mutual funds and the asset management industry",sim:"mfnav",
+   html:`<p>A mutual fund pools money from many investors and invests it in a portfolio of securities, with each investor holding units proportional to their contribution — professional management and diversification at a scale an individual retail investor could not achieve alone.</p>
+   <p>The <b>Net Asset Value</b> is the price of one unit: <code>NAV = (total assets − liabilities) ÷ number of units outstanding</code>. NAV moves with the underlying portfolio's value, and it is calculated once at the end of each trading day for open-ended funds — a fact worth knowing because it distinguishes mutual fund investing from real-time stock trading.</p>
+   @SIM@
+   <p>Funds are classified by what they hold — <b>equity</b> (further split by market-cap focus: large-cap, mid-cap, small-cap), <b>debt</b> (by the maturity and credit quality of bonds held), <b>hybrid</b> (a mix of equity and debt), and <b>index funds/ETFs</b> that simply track a benchmark rather than being actively managed, at a much lower cost. The active-versus-passive question — does active management earn back the higher fees it charges through better returns — is a live debate worth a line in any capital-markets answer.</p>
+   <p>Two structural facts complete the picture. A mutual fund invests via a <b>SIP (Systematic Investment Plan)</b> just as easily as a lump sum, buying more units when prices are low and fewer when high — rupee-cost averaging, the standard retail pitch. And the industry is regulated by <b>SEBI</b>, with <b>AMFI</b> (the Association of Mutual Funds in India) as the self-regulatory industry body running investor-awareness campaigns and distributor certification, not a statutory regulator itself — a distinction ("AMFI is not SEBI") that is an easy objective trap.</p>`,
+   keys:["NAV = (assets − liabilities) ÷ units outstanding; computed once daily for open-ended funds","Equity, debt, hybrid and index/ETF are the fund-type axes; index funds are passive and low-cost","SIP = rupee-cost averaging: more units bought when prices are low, fewer when high","SEBI regulates; AMFI is the self-regulatory industry body — not a statutory regulator"],
+   pyq:[{q:"How does a SIP reduce the risk of poorly timed lump-sum investment?",a:"A SIP invests a fixed sum at regular intervals rather than all at once, so the same rupee amount buys more units when the NAV is low and fewer units when it is high — this is rupee-cost averaging, and it lowers the average cost per unit over a volatile period compared to investing the same total as one lump sum at an unknown point in the cycle. It does not guarantee a profit or eliminate market risk, but it removes the specific risk of unluckily timing a single large investment right before a downturn.",tag:"FM · descriptive"}],
+   quiz:[
+   {q:"NAV is calculated as:",o:["Total assets ÷ number of investors","(Total assets − liabilities) ÷ units outstanding","Market price ÷ face value","Total premium ÷ GDP"],a:1,e:"NAV is per-unit value: net assets divided by units outstanding."},
+   {q:"An index fund is best described as:",o:["An actively managed high-return fund","A passively managed fund tracking a benchmark, at lower cost","A guaranteed-return government scheme","A type of insurance product"],a:1,e:"Passive tracking of an index (e.g. Nifty 50) rather than active stock-picking, hence a lower expense ratio."},
+   {q:"AMFI is best described as:",o:["The statutory regulator of mutual funds","A self-regulatory industry body for mutual funds, distinct from SEBI","A government insurance scheme","A stock exchange"],a:1,e:"SEBI is the statutory regulator; AMFI is the industry association running investor awareness and distributor certification — a common objective trap."}]},
+
+  {id:"intermed",n:"Market intermediaries and infrastructure",
+   html:`<p>Between an investor's order and a settled trade sit several specialised intermediaries, and knowing who does what is a compact, high-yield objective topic.</p>
+   <div class="tw"><table class="t"><thead><tr><th>Intermediary</th><th>Role</th></tr></thead><tbody>
+   <tr><td>Stock broker</td><td>Executes buy/sell orders on an exchange on behalf of clients; SEBI-registered</td></tr>
+   <tr><td>Depository (NSDL, CDSL)</td><td>Holds securities in electronic (dematerialised) form; eliminates physical share certificates</td></tr>
+   <tr><td>Depository Participant</td><td>The investor-facing agent of a depository — typically a bank or broker — where a demat account is actually opened</td></tr>
+   <tr><td>Merchant banker</td><td>Manages public issues (IPOs/FPOs): due diligence, pricing, prospectus, underwriting coordination</td></tr>
+   <tr><td>Underwriter</td><td>Commits to buying unsold shares in an issue, guaranteeing the issuer receives the target capital</td></tr>
+   <tr><td>Credit rating agency</td><td>Assesses and publishes an issuer's or instrument's creditworthiness (CRISIL, ICRA, CARE, India Ratings)</td></tr>
+   <tr><td>Registrar and Transfer Agent</td><td>Maintains investor records, processes dividends, corporate actions and transfers</td></tr>
+   <tr><td>Custodian</td><td>Safekeeps securities and settles trades for large institutional investors</td></tr>
+   </tbody></table></div>
+   <p>Two connective points make this list into understanding rather than trivia. First, <b>dematerialisation</b> (moving from paper share certificates to electronic holdings) is what made India's T+1 settlement cycle from Finance & Management chapter 4 possible at all — you cannot settle trades overnight with physical paper changing hands. Second, <b>credit rating agencies</b> are regulated by SEBI but paid by the issuer whose debt they rate — the "issuer pays" model, a structural conflict of interest that became visible internationally after the 2008 financial crisis and remains a standing criticism worth naming when a rating-agency question comes up.</p>`,
+   keys:["Depository holds securities electronically; Depository Participant is the investor-facing counter for it","Merchant banker manages the issue; underwriter guarantees it sells; RTA maintains investor records","Dematerialisation is what makes fast settlement (T+1) physically possible","Credit rating agencies are 'issuer pays' — a standing conflict-of-interest critique"],
+   pyq:[{q:"What is the 'issuer pays' problem in credit rating, and why does it matter?",a:"Credit rating agencies are paid by the entity whose debt they are rating, not by the investors who rely on the rating — creating an incentive to award favourable ratings to retain business, especially from large, repeat issuers. This came under global scrutiny after the 2008 crisis, when structured products retained high ratings shortly before defaulting. Mitigations include SEBI regulation of rating agencies, rotation and disclosure norms, and rating agencies' own reputational stake in accuracy — but the structural conflict is not eliminated, only managed, which is the honest answer to give if asked whether ratings can be fully trusted.",tag:"FM · descriptive"}],
+   quiz:[
+   {q:"A demat account is opened through a:",o:["Credit rating agency","Depository Participant","Merchant banker","Registrar"],a:1,e:"The Depository Participant (often a bank or broker) is the investor-facing link to NSDL or CDSL."},
+   {q:"An underwriter's role in a public issue is to:",o:["Set the share price alone","Guarantee that unsold shares will be bought, ensuring the issuer raises its target capital","Maintain the shareholder register","Rate the issuer's creditworthiness"],a:1,e:"Underwriting is a commitment to absorb any shortfall in subscription, up to the underwritten amount."},
+   {q:"The 'issuer pays' model refers to a conflict of interest in:",o:["Stock broking","Credit rating agencies being paid by the entity they rate","Mutual fund NAV calculation","Depository fees"],a:1,e:"Rating agencies are compensated by issuers, not by the investors relying on the rating — a structural tension highlighted after 2008."}]}
  ]},
 
  {id:"f2",n:"Chapter 2",name:"RBI and monetary policy",
@@ -923,52 +1073,192 @@ var DATA=[
    {q:"The Nachiket Mor Committee is associated with:",o:["Inflation targeting","Differentiated bank licences","Fiscal consolidation","Corporate governance"],a:1,e:"It recommended payments banks and small finance banks as differentiated licences for financial inclusion."}]}
  ]},
 
- {id:"p1b",n:"Chapter 2",name:"Quantitative aptitude and reasoning",
-  intro:"Thirty marks of quant and sixty of reasoning, with sectional timing. The goal is not mastery — it is clearing the sectional cut-off quickly enough to leave time for General Awareness.",
+ {id:"p1b",n:"Chapter 2",name:"Quantitative aptitude",
+  intro:"Thirty marks, sectional timing, and a syllabus that repeats the same dozen question types every year. This chapter builds each type properly — formula, method, worked example, drill — rather than treating quant as one undifferentiated block.",
   topics:[
 
-  {id:"quant",n:"Quant: the core arithmetic that repeats",sim:"quantdrill",
-   html:`<p>Phase I quant is arithmetic and data interpretation, not mathematics. The distribution is stable: a <b>data interpretation</b> set or two (tables, bar and line charts, caselets), <b>simplification and approximation</b>, <b>number series</b>, <b>quadratic comparison</b>, and word problems drawn from a short list — percentage, ratio and proportion, average, profit and loss, simple and compound interest, time-speed-distance, time and work, mixtures, and permutations, combinations and probability at a basic level.</p>
+  {id:"numsimp",n:"Number system, simplification and approximation",sim:"percentfrac",
+   html:`<p>Two habits carry more weight than any formula in this section: knowing your <b>tables, squares and cubes</b> well past where school stopped, and converting <b>percentages to fractions</b> on sight rather than doing long division under pressure.</p>
    @SIM@
-   <p>Three habits do most of the work. First, <b>percentage-to-fraction conversion</b> on sight: 12.5% is 1/8, 16.67% is 1/6, 33.33% is 1/3, 37.5% is 3/8, 62.5% is 5/8, 83.33% is 5/6. Every DI set becomes faster. Second, <b>tables to 25, squares to 30 and cubes to 15</b> — this is the cheapest speed gain available. Third, <b>approximate before you calculate</b>: most DI options are far enough apart that a 5% estimate identifies the answer.</p>
-   <p>The exam-day rule that matters more than any technique: with −0.25 negative marking, a blind guess among four options has negative expected value. Eliminate to two and a guess becomes roughly break-even; below that, skip. Attempting fewer questions accurately beats attempting more, and in a sectional-timing format an unsolvable question costs you the ones after it.</p>`,
-   keys:["Fraction equivalents of common percentages turn DI into mental arithmetic","Tables to 25, squares to 30, cubes to 15 — the cheapest speed gain","Approximate first: DI options are usually far enough apart","−0.25 marking: guess only after eliminating to two options"],
-   pyq:[{q:"How many questions should I attempt in the quant section?",a:"Work backwards from the sectional cut-off rather than from a target attempt count. Recent sectional cut-offs for quant have sat in the mid-teens out of 30 for the general category, so roughly 20-22 accurate attempts comfortably clears it. Accuracy above 85% with 20 attempts beats 28 attempts at 65%, because each error costs a quarter mark on top of the mark not earned.",tag:"Phase I · strategy"}],
+   <p>The number-system facts worth having cold: a number is divisible by 3 if its digit sum is divisible by 3, by 9 if the digit sum is divisible by 9, by 11 if the alternating digit sum is divisible by 11, and by 4 if its last two digits form a number divisible by 4. <b>BODMAS</b> (brackets, orders, division/multiplication, addition/subtraction, left to right within a tier) resolves every simplification question — the trap is always multiplication/division being done in the wrong order relative to each other, not the brackets.</p>
+   <p><b>Approximation</b> is a skill, not a shortcut for the lazy: round each number to one or two significant figures, carry the calculation, and trust it — because on a 200-mark paper with a clock running, an approximate answer that identifies the right option in 15 seconds beats an exact one that takes 90. The discipline is knowing <i>when</i> the options are far enough apart to approximate safely: if two options differ by less than 5%, approximate cautiously or not at all.</p>`,
+   keys:["Fraction equivalents of common percentages, memorised, not derived — the single biggest speed gain","Divisibility by 3/9: digit sum; by 11: alternating digit sum; by 4: last two digits","BODMAS traps live in the division/multiplication ordering, not the brackets","Approximate only when option gaps exceed ~5% — otherwise it costs more time than it saves"],
+   pyq:[{q:"12345 × 999 = ? (approximation-style question)",a:"12345 × 999 = 12345 × 1000 − 12345 = 12,345,000 − 12,345 = 12,332,655. The method — multiply by the round number, then subtract the small correction — is faster and more reliable than direct multiplication, and it is the standard trick for any 'multiply by a number just below a round figure' question.",tag:"Phase I · method"}],
    quiz:[
-   {q:"37.5% expressed as a fraction is:",o:["3/8","5/8","1/3","2/5"],a:0,e:"3/8. Learning these on sight is the single biggest speed gain in data interpretation."},
-   {q:"A sum doubles in 8 years at simple interest. The annual rate is:",o:["8%","10%","12.5%","15%"],a:2,e:"Doubling means interest equals principal, so rate × time = 100 → 100/8 = 12.5%."},
-   {q:"If the price rises 25% and then falls 20%, the net change is:",o:["+5%","−5%","0%","+45%"],a:2,e:"1.25 × 0.80 = 1.00 — exactly zero. The successive-change trap is a standard Phase I question."},
-   {q:"With −0.25 negative marking, a blind guess among four options has expected value:",o:["Positive","Zero","Negative","Undefined"],a:2,e:"0.25 × 1 − 0.75 × 0.25 = +0.0625 per question for a pure random guess is a common miscalculation; with four options the expected value is 0.25 − 0.1875 = +0.0625 only if all options are equally likely and you have zero information. In practice, partial misinformation and time cost make undiscriminating guessing a losing strategy — eliminate to two before guessing."}]},
+   {q:"A number is divisible by 11 if:",o:["Its digit sum is divisible by 11","The alternating sum of its digits is divisible by 11","Its last digit is 0 or 1","It is odd"],a:1,e:"Alternating digit sum (sum of digits in odd positions minus sum in even positions) divisible by 11, including zero."},
+   {q:"48 ÷ 2 × (3+3) = ?",o:["4","144","8","24"],a:1,e:"BODMAS: brackets first (3+3=6), then division and multiplication left to right: 48÷2=24, 24×6=144. The classic order trap."},
+   {q:"Which of these is closest to 29% of 810?",o:["190","235","310","410"],a:1,e:"29% ≈ 30% of 810 ≈ 243, closest option is 235 — approximation identifies the right band without exact computation."}]},
 
-  {id:"reason",n:"Reasoning: puzzles decide the section",sim:"syllo",
-   html:`<p>Reasoning carries sixty marks, the second-largest section, and roughly half of it is <b>puzzles and seating arrangement</b>. Everything else — syllogism, inequality, coding-decoding, blood relations, direction sense, order and ranking, data sufficiency, input-output and the verbal reasoning cluster — is smaller and faster.</p>
-   <p>The strategic point is counter-intuitive: puzzles have the highest marks but the highest time risk. The disciplined approach is to clear the fast, certain marks first — inequality, syllogism, coding, blood relations, direction, alphanumeric series — and only then enter the puzzle sets, choosing the ones whose constraints look most determinate. A puzzle that resists for four minutes should be abandoned; sunk time is not an argument for more time.</p>
+  {id:"pctpl",n:"Percentage, profit-loss, and simple & compound interest",sim:"sici",
+   html:`<p>These three topics are really one topic wearing different clothes: all of them are about a base value, a rate, and how that rate compounds or doesn't.</p>
+   <p><b>Percentage change</b> composes multiplicatively, not additively — a 20% rise followed by a 20% fall does <i>not</i> return you to the start (1.2 × 0.8 = 0.96, a net 4% fall). This single fact, tested as "successive percentage change," is one of the most reliable marks in the paper once you internalise it.</p>
+   <p><b>Profit and loss</b>: profit% = (SP − CP)/CP × 100. The trap questions layer a <b>discount</b> on a <b>marked price</b> before the sale — remember that discount is calculated on the marked price, profit on the cost price, and the two percentages do not simply add or subtract.</p>
    @SIM@
-   <p><b>Syllogism</b> is worth learning by diagram rather than by rules. Draw the circles, test whether the conclusion must be true in <i>every</i> valid arrangement, and remember three traps: "some A are B" always implies "some B are A"; "all A are B" makes "some B are A" true but not "all B are A"; and a pair of complementary conclusions (an I-and-O pair on the same terms) means <i>either-or</i> follows even when neither alone does.</p>
-   <p>For puzzles, the method that scales: extract the fixed information first, build the frame around the most constrained person or position, track possibilities in parallel columns rather than restarting, and write negative information down — knowing where someone is <i>not</i> is often what closes the arrangement.</p>`,
-   keys:["Puzzles are ~50% of the section but the highest time risk — take them second","Fast certain marks first: inequality, syllogism, coding, blood relations, direction","Syllogism: a conclusion follows only if true in every valid diagram","Either-or applies to complementary pairs; record negative information in puzzles"],
-   pyq:[{q:"Statements: All pens are books. Some books are red. Conclusions: (i) Some pens are red. (ii) Some books are pens.",a:"Only (ii) follows. 'All pens are books' guarantees that pens exist within books, so 'some books are pens' is a valid converse. (i) does not follow — the red books need not overlap with the pen region, even though they might. The distinction between 'possible' and 'necessarily true' is the entire subject.",tag:"Phase I · syllogism"}],
+   <p><b>Simple interest</b> grows linearly: <code>SI = PRT/100</code>. <b>Compound interest</b> grows on a growing base: <code>A = P(1+R/100)ᵀ</code>. For the same P, R and T, CI always exceeds SI for T &gt; 1 — the gap is interest earning interest, and it is exactly the money-multiplier intuition from Finance & Management's monetary chapter, applied to a single account instead of the whole banking system. A frequently tested shortcut: for 2 years, <b>CI − SI = P(R/100)²</b> — worth memorising directly rather than deriving under time pressure.</p>`,
+   keys:["Percentage changes multiply, they don't add — a 20% rise + 20% fall is a net 4% fall, not zero","Discount is on marked price, profit is on cost price — never conflate the two bases","SI = PRT/100 (linear); CI = P(1+R/100)^T (compounding)","2-year shortcut: CI − SI = P×(R/100)² — memorise it, don't derive it under pressure"],
+   pyq:[{q:"The difference between CI and SI on a sum for 2 years at 10% is ₹150. Find the sum.",a:"Using CI − SI = P(R/100)² for 2 years: 150 = P × (10/100)² = P × 0.01, so P = ₹15,000. This shortcut formula is worth memorising directly — deriving it from first principles (computing SI and CI separately) under exam time pressure is the slow route to the same fifteen seconds a memorised formula gives you for free.",tag:"Phase I · formula"}],
    quiz:[
-   {q:"Statements: All cats are dogs. All dogs are pets. Which necessarily follows?",o:["All pets are cats","All cats are pets","Some pets are not dogs","No cats are pets"],a:1,e:"The chain All A→B→C gives All A are C. The reverse directions are not guaranteed."},
-   {q:"'Some A are B' necessarily implies:",o:["Some B are A","All B are A","No B are A","All A are B"],a:0,e:"Particular affirmative propositions convert simply — 'some' is symmetric."},
-   {q:"In a seating puzzle, the most efficient starting point is:",o:["The first clue given","The most constrained position or person","The last clue given","Any random assumption"],a:1,e:"Starting from maximum constraint minimises branching, which is what costs time in puzzles."}]}
+   {q:"A price is increased by 25% and then decreased by 20%. The net effect is:",o:["No change","5% increase","5% decrease","10% increase"],a:0,e:"1.25 × 0.80 = 1.00 exactly — no net change. Note this differs from the classic 20%-up-20%-down trap, which does produce a net fall."},
+   {q:"An article marked at ₹1,200 is sold after a 15% discount, yielding a 2% profit. The cost price was:",o:["₹1,000","₹1,020","₹1,080","₹1,200"],a:0,e:"SP = 1200 × 0.85 = 1020. CP = SP ÷ 1.02 = 1020 ÷ 1.02 = ₹1,000."},
+   {q:"₹8,000 at 10% p.a. compound interest (annual compounding) amounts to how much after 2 years?",o:["₹9,600","₹9,680","₹9,800","₹10,000"],a:1,e:"8000 × 1.1² = 8000 × 1.21 = ₹9,680."},
+   {q:"For the same principal, rate and time (>1 year), compound interest compared to simple interest is:",o:["Always less","Always equal","Always greater","Depends on the principal"],a:2,e:"Compounding means interest earns interest, so CI ≥ SI always, with equality only at T=0 or T=1 (annual compounding)."}]},
+
+  {id:"ratavg",n:"Ratio, proportion, averages and mixtures",sim:"allig",
+   html:`<p><b>Ratio</b> compares two quantities of the same kind; a ratio a:b splits any total into a/(a+b) and b/(a+b) shares — the single move that solves most "divide ₹X in the ratio a:b" questions in one line. <b>Proportion</b> is two ratios set equal, and a "third/fourth proportional" question is just solving for the missing term in that equation.</p>
+   <p><b>Averages</b> hide a useful shortcut: when a new value joins a group, the change in average, multiplied by the new group size, tells you the "excess" or "deficit" the new value contributed relative to the old average — faster than recomputing the whole sum for every "new member joins" question.</p>
+   @SIM@
+   <p><b>Alligation</b> is the fast method for any "mix two things to hit a target average" question — mixing milk and water, two grades of tea, or an exam's overall pass percentage from two sections' individual rates. The rule: write the two values at the ends of a line, the target (mean) value in the middle, take differences <i>diagonally</i>, and that gives you the mixing ratio directly — cheaper-to-dearer ratio equals (dearer − mean) : (mean − cheaper). It looks like a trick because it is one, but it is a derivable, reliable one, and the diagram above is worth being able to redraw from memory.</p>`,
+   keys:["A ratio a:b splits a total X into aX/(a+b) and bX/(a+b) — the one-line solve for most ratio-division questions","New average − old average, × new count, gives the new entrant's 'excess' contribution","Alligation ratio = (dearer − mean) : (mean − cheaper) — cross the differences diagonally","Proportion questions are just 'solve for x' once set up as two equal ratios"],
+   pyq:[{q:"In what ratio must tea worth ₹80/kg be mixed with tea worth ₹100/kg to get a mixture worth ₹92/kg?",a:"By alligation: cheaper = 80, dearer = 100, mean = 92. Ratio (cheaper:dearer) = (dearer − mean) : (mean − cheaper) = (100−92):(92−80) = 8:12 = 2:3. So the ₹80 tea and ₹100 tea must be mixed in the ratio 2:3 — note it is the cheaper item that gets the ratio-component closer to the dearer's difference, which is the part people get backwards under time pressure.",tag:"Phase I · alligation"}],
+   quiz:[
+   {q:"₹3,600 is divided between A and B in the ratio 5:4. A's share is:",o:["₹1,600","₹2,000","₹2,400","₹1,800"],a:1,e:"A's share = 5/(5+4) × 3600 = 5/9 × 3600 = ₹2,000."},
+   {q:"The average age of 10 people increases by 2 years when a new person replaces one aged 30. The new person's age is:",o:["32","40","48","50"],a:3,e:"The average rises by 2 years across 10 people, so the total rises by 10×2=20. The new person must therefore be 20 years older than the one they replaced: 30+20=50."},
+   {q:"Milk worth ₹40/litre is mixed with water (₹0/litre) to get a mixture worth ₹32/litre. The ratio of milk to water is:",o:["4:1","3:1","5:1","2:1"],a:0,e:"Alligation: (40−32):(32−0) = 8:32 = 1:4 — but that's water:milk, so milk:water = 4:1."}]},
+
+  {id:"tswork",n:"Time-speed-distance and time-and-work",sim:"tsd",
+   html:`<p>Both topics are ratio problems wearing a physical or a labour costume, and both collapse to the same core relationship once you see through the costume.</p>
+   <p><b>Time-speed-distance</b>: <code>distance = speed × time</code>, and everything else is bookkeeping around that one equation. The two patterns worth knowing cold: for objects moving <b>toward</b> each other, relative speed is the <i>sum</i> of their speeds; moving in the <b>same direction</b>, relative speed is the <i>difference</i>. A train crossing a platform must cover its own length <i>plus</i> the platform's length — the single most common conceptual miss in this topic.</p>
+   @SIM@
+   <p><b>Time and work</b> runs on the same logic as averages: convert everyone's work rate to "fraction of the job per day" (1/n for someone who takes n days alone), add rates when people work together, and take the reciprocal of the combined rate to get the combined time. The shortcut worth memorising: if A alone takes <code>a</code> days and B alone takes <code>b</code> days, together they take <code>ab/(a+b)</code> days — derivable in one line from the rate logic above, but faster memorised.</p>
+   <p>The connective idea across both: whenever a question gives you two "alone" rates and asks for a "together" answer, or two speeds and asks for a "closing" answer, you are adding two rates and inverting — the same arithmetic move every time, whichever costume the question wears.</p>`,
+   keys:["Relative speed: sum when approaching, difference when moving the same way","A train crossing a platform covers train length + platform length — the most common miss","Time & work: convert to rate (1/days), add rates when working together, invert for combined time","Two-worker shortcut: together = ab/(a+b) days, for solo times a and b"],
+   pyq:[{q:"A can do a piece of work in 12 days, B in 18 days. Working together, in how many days will they finish it?",a:"Using the shortcut ab/(a+b) = (12×18)/(12+18) = 216/30 = 7.2 days. Derivation check: A's rate = 1/12/day, B's rate = 1/18/day, combined rate = 1/12+1/18 = 3/36+2/36 = 5/36/day, so time = 36/5 = 7.2 days — same answer, confirming the shortcut is just the derivation pre-computed.",tag:"Phase I · formula"}],
+   quiz:[
+   {q:"Two trains, 120m and 180m long, run in opposite directions at 54 km/h and 36 km/h. Time to cross each other is:",o:["10 seconds","12 seconds","14 seconds","20 seconds"],a:1,e:"Opposite directions → relative speed = 54+36 = 90 km/h = 25 m/s. Total distance to cover = sum of both lengths = 120+180 = 300m. Time = 300÷25 = 12 seconds."},
+   {q:"A is thrice as efficient as B. If B alone takes 30 days, A alone takes:",o:["10 days","15 days","20 days","90 days"],a:0,e:"Thrice as efficient means one-third the time: 30/3 = 10 days."},
+   {q:"A boat's speed in still water is 10 km/h; the current's speed is 2 km/h. Downstream speed is:",o:["8 km/h","10 km/h","12 km/h","20 km/h"],a:2,e:"Downstream = boat speed + current speed = 10+2 = 12 km/h (the boat/stream version of 'moving in the same direction' relative speed)."}]},
+
+  {id:"digest",n:"Data interpretation and data sufficiency",sim:"ditab",
+   html:`<p>Data interpretation is not a separate maths topic — it is every arithmetic skill above, applied to a table or chart instead of a sentence. The skill that actually differentiates fast solvers is <b>reading the question before the data</b>: identify exactly which cells or bars you need, and ignore the rest of the table entirely.</p>
+   @SIM@
+   <p>Three chart types recur. <b>Tables</b> test direct lookup and ratio computation. <b>Bar and line charts</b> test trend-reading and period-over-period change — and the y-axis scale is the detail most likely to be misread under time pressure. <b>Pie charts</b> test percentage-of-total, and the trap is forgetting that a pie's percentages describe a share of <i>that specific total</i>, which changes if the underlying total changes between pies in a two-pie-chart question.</p>
+   <p><b>Data sufficiency</b> questions do not ask you to solve — they ask whether you <i>could</i> solve, given each statement alone, both together, or neither. The discipline: evaluate statement (1) alone, forget it, evaluate statement (2) alone, and only then consider both together — evaluating them together first is the single most common error, because it lets information from one statement contaminate your reading of the other.</p>`,
+   keys:["Read the question before the data — identify the exact cells needed, ignore the rest","Pie-chart traps: percentages are shares of that pie's own total, which can change between pies","Data sufficiency: evaluate each statement alone first, only then consider them together","A DI set is arithmetic + ratios you already know, applied to a table instead of a sentence"],
+   pyq:[{q:"Data sufficiency: What is the profit percentage on an article? (1) The cost price is ₹500. (2) The selling price is 20% more than the cost price.",a:"Statement (1) alone: cost price known, but no selling price or profit — insufficient alone. Statement (2) alone: gives the relationship (SP = 1.2×CP) but expresses profit% directly (20%) without needing the actual cost price — sufficient alone, since profit% here doesn't require the absolute values. So the answer is 'statement (2) alone is sufficient, statement (1) alone is not' — a shape that surprises candidates who assume more numbers always means more sufficiency.",tag:"Phase I · data sufficiency"}],
+   quiz:[
+   {q:"In a data sufficiency question, the correct method is to:",o:["Combine both statements immediately","Evaluate statement (1) alone, then statement (2) alone, then both together if needed","Guess based on which statement has more numbers","Always pick 'both together' as the safe answer"],a:1,e:"Sequential, independent evaluation prevents one statement's information from contaminating your reading of the other."},
+   {q:"In a two-pie-chart question showing 'distribution of expenses' for two different years with different total budgets, a category's percentage share:",o:["Represents the same absolute amount in both years","Is a share of that year's own total, which may differ between years","Cannot be compared at all","Is always higher in the later year"],a:1,e:"The classic two-pie trap: equal percentages can represent very different absolute values if the totals differ."},
+   {q:"The fastest way to answer 'what is the ratio of X to Y' from a bar chart is to:",o:["Read every bar in the chart","Read only the X and Y bars needed and divide","Estimate visually without reading values","Convert the whole chart to a table first"],a:1,e:"Reading only the two required values and computing directly is faster and just as accurate as processing the full chart."}]}
  ]},
 
- {id:"p1c",n:"Chapter 3",name:"English — objective and descriptive",
-  intro:"Thirty marks in Phase I, and a full hundred-mark descriptive paper in Phase II. The second is where the marks actually are, and it is the most under-prepared paper in the loop.",
+ {id:"p1c",n:"Chapter 3",name:"Reasoning",
+  intro:"Sixty marks — the single largest section in Phase I — and roughly half of it is puzzles. The chapter is ordered by time-efficiency: the fast, certain marks first, the puzzles last.",
   topics:[
 
-  {id:"eng",n:"Phase I English: comprehension and error spotting",
-   html:`<p>Thirty questions, and the composition is predictable: a <b>reading comprehension</b> passage or two (often economy or business themed, which your ESI reading directly supports), <b>cloze test</b>, <b>error spotting</b>, <b>sentence improvement</b>, <b>para jumbles</b>, <b>fillers</b> and <b>word usage</b>.</p>
+  {id:"seating",n:"Puzzles and seating arrangement",sim:"seating",
+   html:`<p>Puzzles carry the most marks in the reasoning section and the most time risk, which is exactly why they are worth a dedicated method rather than ad hoc reading. Step through a worked linear-arrangement puzzle below to see the method in action.</p>
+   @SIM@
+   <p>The method, stated generally: <b>extract every clue onto scratch paper</b> before placing anyone, in your own shorthand. <b>Place the most constrained clue first</b> — an absolute position ("D sits at the extreme left") gives you a fixed anchor that a relative clue ("B sits somewhere left of D") does not. <b>Track possibilities in parallel</b> when a clue is ambiguous — don't erase and restart, write both branches and let a later clue eliminate one. <b>Record negative information</b> explicitly — "C is not at position 3" is often exactly what closes the puzzle two clues later, and it's the information candidates most often forget to write down.</p>
+   <p>Circular arrangements add one wrinkle: state explicitly whether people face the centre or face outward, because "to the immediate left" flips meaning between the two — a favourite examiner trap. For "facing the centre," left-right is anticlockwise-clockwise from each person's own perspective, which is the opposite of what it looks like from outside the circle.</p>
+   <p>On time budgeting: if a puzzle hasn't yielded a placeable fact within about four minutes, abandon it and return only if time remains. A half-solved puzzle that eats twelve minutes for zero marks is the single most common reason strong candidates miss the reasoning cut-off.</p>`,
+   keys:["Extract every clue to shorthand before placing anyone — don't solve inside your head","Place absolute-position clues first; they anchor the puzzle more than relative clues do","Track ambiguous branches in parallel rather than restarting from scratch","Circular puzzles: state facing-centre vs facing-outward explicitly — it flips left/right"],
+   pyq:[{q:"Eight people sit around a circular table facing the centre. How would you begin solving this if the first clue is 'C sits third to the right of F'?",a:"This is a relative, not absolute, clue — it fixes C and F's positions <i>relative to each other</i> but not their absolute seats around the table. The efficient move is to scan the remaining clues for an absolute anchor (a named direction like 'at the top' or a clue involving a fixed reference), place that first, and only then work out where the C-F relationship lands. Starting from a relative clue with no anchor forces you to carry multiple rotational possibilities simultaneously — solvable, but slower than anchoring first.",tag:"Phase I · method"}],
+   quiz:[
+   {q:"In a circular arrangement with people facing the centre, a person's 'immediate right' is:",o:["The same as their immediate right if they faced outward","Anticlockwise from their own perspective","Clockwise from their own perspective","Undefined without more information"],a:2,e:"Facing the centre, a person's own right hand points clockwise around the circle — the opposite of facing-outward arrangements, which is why the examiner always specifies."},
+   {q:"The most time-efficient way to begin a seating puzzle is to:",o:["Start with the first clue given, in order","Place the most constrained (usually absolute-position) clue first","Guess an arrangement and check it against all clues","Solve entirely in your head without writing"],a:1,e:"Maximum-constraint-first minimises the branching that costs time in puzzles."},
+   {q:"If a puzzle yields no new placeable information after about four minutes, the efficient move is to:",o:["Keep working until it's solved, however long that takes","Abandon it and return later if time permits","Guess an answer immediately","Skip the entire reasoning section"],a:1,e:"Sunk time is not a reason to invest more; a stuck puzzle at minute four rarely un-sticks at minute eight."}]},
+
+  {id:"syllo2",n:"Syllogism, inequality and coding-decoding",sim:"syllo",
+   html:`<p><b>Syllogism</b> is covered by diagram, not by rule — draw the circles, test whether the conclusion holds in <i>every</i> valid arrangement consistent with the statements, not just the one arrangement that first comes to mind. Use the trainer below.</p>
+   @SIM@
+   <p>Three traps recur. "Some A are B" always implies "some B are A" — particular statements convert freely. "All A are B" implies "some B are A" but never "all B are A" — universal statements only convert partially. And a pair of statements that are logical complements on the same terms (for instance, one "some ... are" and one "some ... are not," covering the same two terms) produces an <b>either-or</b> conclusion even when neither statement alone proves anything — a construction worth recognising by shape rather than re-deriving each time.</p>
+   <p><b>Inequality</b> (coded as symbols like &gt;, ≥, =, &lt;, ≤) reduces to a single discipline: chain the relationships in one direction, and note that a strict inequality (&gt; or &lt;) anywhere in the chain makes the endpoints' relationship strict too, while an unbroken chain of ≥/≤ leaves it non-strict. "A &gt; B ≥ C" lets you conclude "A &gt; C" — the strict link dominates.</p>
+   <p><b>Coding-decoding</b> is pattern recognition dressed as cryptography: letter-shift codes (each letter moved a fixed number of places), number-coding (a word's letters mapped to numbers by position or by a rule), and substitution codes. The method is always the same — find the rule from the given example, state it explicitly, then apply it mechanically to the new case rather than re-deriving a shortcut mid-question.</p>`,
+   keys:["Some→some converts freely; All→some converts but not to All — universal statements convert only partially","A strict inequality anywhere in a chain makes the endpoint relationship strict","Complementary statement pairs (some-are / some-are-not on the same terms) give an either-or conclusion","Coding: state the rule explicitly from the example before applying it to the new case"],
+   pyq:[{q:"If A > B ≥ C > D, what can be concluded about A and D?",a:"A > D. Chain rule: any strict inequality in the chain forces the endpoints into a strict relationship, regardless of how many non-strict (≥) links sit in between — B ≥ C does not weaken the strictness already established by A > B and C > D.",tag:"Phase I · inequality"}],
+   quiz:[
+   {q:"Statements: Some pens are books. No book is red. Conclusion: No pen is red.",o:["Follows","Does not follow","Follows only if 'some' is read as 'all'","Cannot be determined"],a:1,e:"Does not follow. Only 'some' pens are books, and it's the book-pens (not necessarily all pens) that are guaranteed non-red — other pens could still be red."},
+   {q:"P ≥ Q > R = S. The relationship between P and S is:",o:["P > S","P ≥ S","P = S","Cannot be determined"],a:0,e:"The strict link (Q > R) forces the overall P-to-S relationship to be strict: P > S."},
+   {q:"In a code, if 'CAT' is written as '3120' using A=1,B=2,C=3... position rule, what would 'BAT' be?",o:["2120","2020","2130","1220"],a:0,e:"B=2, A=1, T=20 → 2,1,20 → '2120', following the same letter-to-number rule established by the example."}]},
+
+  {id:"bloodrel",n:"Blood relations, direction sense and ranking",sim:"direction",
+   html:`<p>Three compact topics, each solved by drawing rather than reasoning purely verbally — a family tree, a compass path, or a number line.</p>
+   <p><b>Blood relations</b>: draw a family tree as you read, using generation-levels as rows (grandparents above parents above children) and marking gender where stated. "My mother's only daughter" resolves to "myself" if the speaker is female and has no sisters — the kind of self-referential clue that a drawn tree resolves instantly and a purely verbal reading trips over.</p>
+   @SIM@
+   <p><b>Direction sense</b> questions trace a path on an implied grid; the discipline is tracking each turn precisely (a right turn while facing north means you now face east) and computing net displacement with the Pythagorean relationship when the question asks for straight-line distance rather than distance travelled. Use the simulator above to see a worked path traced out.</p>
+   <p><b>Ranking and ordering</b> questions reduce to a number line: "from the top" and "from the bottom" rankings for the same group relate by <code>total + 1 = rank from top + rank from bottom</code> — a formula worth having ready rather than re-deriving with a small example each time. For "between" questions, count the people strictly between two ranks, not including either endpoint, which is the detail most often miscounted.</p>`,
+   keys:["Draw the family tree by generation-row as you read; don't try to hold it verbally","A turn changes facing direction predictably: right turn from north → east, and so on around the compass","Net displacement (straight-line) uses Pythagoras; distance travelled just sums the path segments","total + 1 = rank from top + rank from bottom — for ranking-from-both-ends questions"],
+   pyq:[{q:"Pointing to a photograph, a man says, 'She is the daughter of my grandfather's only son.' How is the woman related to the man?",a:"'My grandfather's only son' — since the man himself is one of his grandfather's descendants and the son is described as 'only,' that son must be the man's own father (assuming the man is male and this is the standard puzzle convention). So 'the daughter of my father' is the man's sister. Drawing the tree — grandfather at the top, the only son (the man's father) below, the woman as that son's daughter — makes this immediate; working it out purely verbally is where candidates lose time and make errors.",tag:"Phase I · blood relations"}],
+   quiz:[
+   {q:"A man walks 5 km north, then turns right and walks 3 km, then turns right again and walks 5 km. His straight-line distance from the start is:",o:["3 km","5 km","8 km","13 km"],a:0,e:"North 5km, then east 3km (right turn from north), then south 5km (right turn from east) — the two 5km legs cancel vertically, leaving just the 3km horizontal displacement."},
+   {q:"In a class of 40, Riya ranks 14th from the top. Her rank from the bottom is:",o:["25th","26th","27th","28th"],a:2,e:"total+1 = top+bottom → 41 = 14+bottom → bottom = 27."},
+   {q:"'Pointing to a man, a woman said, \"His mother is the only daughter of my mother.\"' How is the woman related to the man?",o:["Sister","Mother","Aunt","Grandmother"],a:1,e:"'The only daughter of my mother' is the woman herself — so the man's mother is the woman, making the woman the man's mother."}]},
+
+  {id:"datasuf2",n:"Data sufficiency and input-output",
+   html:`<p>Two topics that reward mechanical discipline over cleverness — exactly the kind of section where a calm, methodical candidate outscores a faster but sloppier one.</p>
+   <p><b>Data sufficiency in reasoning</b> follows the same discipline as its quant cousin from the previous chapter: evaluate each statement independently first. The five standard answer options are worth memorising in their exact form, because misreading which option means what is a pure, avoidable error: (a) statement 1 alone sufficient, statement 2 alone not; (b) statement 2 alone sufficient, statement 1 alone not; (c) either alone is sufficient; (d) neither alone is sufficient but both together are; (e) even both together are not sufficient.</p>
+   <p><b>Input-output</b> questions show a word/number string undergoing a stated transformation across several steps (shuffled, sorted, or arithmetically altered) and ask for an intermediate or final state. The method: identify the rule from step 1 to step 2 by comparing the two lines directly, confirm it holds for step 2 to step 3, then apply it mechanically for as many further steps as asked — writing out every intermediate step rather than trying to jump ahead, since a single skipped step is where errors enter.</p>
+   <p>Both topics share the same underlying lesson as the rest of this chapter: reasoning marks come from a repeatable method applied patiently, not from spotting a clever shortcut under time pressure.</p>`,
+   keys:["Memorise the five DS answer options exactly — misreading the option is a pure, avoidable error","Input-output: derive the rule from consecutive steps, confirm it, then apply mechanically","Write out every intermediate step — skipping ahead is where input-output errors enter","Both topics reward patient method over speed; rushing costs more marks here than elsewhere"],
+   pyq:[{q:"What is the standard set of five answer options in a bank-exam data sufficiency question?",a:"(a) Statement I alone is sufficient but statement II alone is not. (b) Statement II alone is sufficient but statement I alone is not. (c) Either statement I or statement II alone is sufficient. (d) Neither statement I nor statement II alone is sufficient, but both together are sufficient. (e) Even both statements together are not sufficient to answer the question. Knowing these five exactly, and not conflating (c) with (d), is worth more than any technique for solving the underlying question.",tag:"Phase I · data sufficiency"}],
+   quiz:[
+   {q:"If both statements together are needed but neither alone suffices, the correct option is:",o:["Either alone is sufficient","Neither alone is sufficient, but both together are","Even both together are not sufficient","Statement I alone is sufficient"],a:1,e:"This is the most commonly correct answer type in practice, and also the one most often confused with 'either alone is sufficient.'"},
+   {q:"In an input-output question, the correct method is to:",o:["Guess the final answer directly from the input","Derive the step-to-step rule from consecutive lines, confirm it, then apply mechanically","Only look at the first and last steps","Assume the same rule as a previous, different question"],a:1,e:"Deriving and confirming the rule before applying it mechanically is what prevents compounding errors across steps."}]}
+ ]},
+
+ {id:"p1d",n:"Chapter 4",name:"English — objective and descriptive",
+  intro:"Thirty marks in Phase I, and a full hundred-mark descriptive paper in Phase II. The second is where the marks actually are, and it is the most under-prepared paper in the loop — candidates who read fluently in English still lose marks to précis mechanics and essay structure they never practised.",
+  topics:[
+
+  {id:"vocab",n:"Vocabulary: synonyms, antonyms and one-word substitution",sim:"vocab",
+   html:`<p>Vocabulary questions reward breadth of exposure more than any technique, but two habits make the exposure stick. First, learn words in <b>pairs and clusters</b>, not isolation — a synonym is easiest to remember alongside its antonym, and a one-word substitute is easiest to remember alongside the phrase it replaces. Second, <b>read the sentence, not just the word</b> when a synonym question gives context — many English words shift meaning by register or context, and the "correct" synonym in a formal, exam-register passage may not be the first meaning that comes to mind.</p>
+   @SIM@
+   <p><b>One-word substitution</b> is its own compact topic worth drilling separately: a phrase like "a person who cannot read or write" collapses to <i>illiterate</i>, "government by the rich" to <i>plutocracy</i>, "one who loves mankind" to <i>philanthropist</i>. These are tested because they compress cleanly into a single MCQ option, and a curated list of 100-150 of the most-repeated substitutions covers the large majority of what actually appears.</p>
+   <p>The efficient way to build vocabulary at this stage of preparation is not a general word-a-day app but <b>exam-register</b> vocabulary — words that show up in editorial and business-page writing, which is exactly the register RBI's reading comprehension passages use. Reading the financial press with a small notebook for unfamiliar words does double duty: it builds the vocabulary this topic needs and the current-affairs habit General Awareness needs, from the same daily fifteen minutes.</p>`,
+   keys:["Learn synonym/antonym pairs together, not words in isolation","Context changes meaning — read the sentence before picking a synonym, don't pattern-match the word alone","One-word substitution: a curated list of ~100-150 repeated phrases covers most of what's actually asked","Build vocabulary from exam-register reading (editorials, business pages) — it doubles as current-affairs prep"],
+   pyq:[{q:"Choose the one-word substitute for 'a place where birds are kept': ",a:"Aviary. This family of 'a place where X is kept/done' substitutions (apiary — bees, aquarium — fish, sanatorium — the sick, observatory — astronomical observation) is worth learning as a set, since exam papers frequently draw two or three from the same family in one sitting.",tag:"Phase I · vocabulary"}],
+   quiz:[
+   {q:"Choose the synonym of 'austere':",o:["Lavish","Severe and simple, without luxury","Talkative","Generous"],a:1,e:"Austere describes a stern simplicity or self-discipline — the opposite of lavish."},
+   {q:"Choose the antonym of 'meticulous':",o:["Careful","Careless","Precise","Thorough"],a:1,e:"Meticulous means showing great attention to detail; careless is its direct opposite."},
+   {q:"One-word substitute for 'a person who is difficult to please':",o:["Fastidious","Gregarious","Altruistic","Candid"],a:0,e:"Fastidious — excessively particular or hard to satisfy."},
+   {q:"One-word substitute for 'government by a small, elite group':",o:["Democracy","Oligarchy","Anarchy","Theocracy"],a:1,e:"Oligarchy — rule by the few, typically the wealthy or powerful."}]},
+
+  {id:"idioms",n:"Idioms, phrasal verbs and word usage",
+   html:`<p>Idioms and phrasal verbs are tested because their meaning cannot be guessed from the individual words — which is exactly why rote familiarity, not logic, is the only real strategy. The efficient approach is a curated set of the 60-80 most-repeated banking-exam idioms, learned with a one-line meaning and, ideally, a memorable example sentence rather than a bare definition.</p>
+   <div class="tw"><table class="t"><thead><tr><th>Idiom</th><th>Meaning</th></tr></thead><tbody>
+   <tr><td>Bite the bullet</td><td>Face a difficult situation with resolve</td></tr>
+   <tr><td>Cut corners</td><td>Do something in the cheapest or easiest way, often sacrificing quality</td></tr>
+   <tr><td>A blessing in disguise</td><td>Something that seems bad but turns out good</td></tr>
+   <tr><td>Back to the drawing board</td><td>Start over after a failed attempt</td></tr>
+   <tr><td>Call it a day</td><td>Stop working on something</td></tr>
+   <tr><td>Once in a blue moon</td><td>Very rarely</td></tr>
+   <tr><td>Read between the lines</td><td>Understand an implied, not stated, meaning</td></tr>
+   <tr><td>Break the ice</td><td>Initiate conversation in an awkward setting</td></tr>
+   </tbody></table></div>
+   <p><b>Phrasal verbs</b> work the same way but attach to a specific base verb — <i>look</i> into (investigate), <i>look</i> forward to (anticipate), <i>look</i> down on (disdain), <i>look</i> up to (admire) — which is why learning them clustered by base verb is far more efficient than an alphabetical list: the shared verb triggers recall of the whole cluster.</p>
+   <p><b>Word usage</b> questions test near-synonyms that are not actually interchangeable: <i>affect</i> (verb, to influence) versus <i>effect</i> (usually a noun, a result); <i>imply</i> (the speaker suggests) versus <i>infer</i> (the listener deduces); <i>less</i> (uncountable quantities) versus <i>fewer</i> (countable items). These four pairs alone cover a large share of the word-usage questions actually asked.</p>`,
+   keys:["Learn idioms with a meaning and an example sentence, not a bare definition — 60-80 covers most of what's asked","Cluster phrasal verbs by their shared base verb (look into/forward to/down on/up to) for faster recall","affect (verb) vs effect (noun); imply (speaker) vs infer (listener); less (uncountable) vs fewer (countable)","Idiom meaning cannot be guessed from the words — treat it as vocabulary, not logic"],
+   pyq:[{q:"'The new policy was a blessing in disguise for small exporters.' What does the idiom mean here?",a:"Something that initially appeared unfavourable turned out to have a hidden benefit — the sentence is saying the policy, though perhaps unwelcome or difficult at first, ultimately helped small exporters. Idiom questions in reading comprehension are usually answerable from the idiom's standard meaning alone, without needing extra context from the passage, which is precisely why a memorised meaning bank pays off directly.",tag:"Phase I · idioms"}],
+   quiz:[
+   {q:"'To cut corners' means:",o:["To take a shortcut, often sacrificing quality","To turn quickly","To reduce costs legitimately","To finish early"],a:0,e:"Doing something in the cheapest or easiest way, typically at the expense of quality or thoroughness."},
+   {q:"Choose the correctly used word: 'The new policy will ___ small businesses significantly.'",o:["effect","affect","affection","effective"],a:1,e:"'Affect' is the verb meaning to influence; 'effect' as a verb means to bring about (a specific, less common usage), and here the sentence needs the ordinary verb 'affect'."},
+   {q:"'To read between the lines' means:",o:["To read very carefully, word by word","To understand an implied meaning not directly stated","To skip unnecessary details","To read quickly"],a:1,e:"Inferring what is suggested rather than explicitly written."}]},
+
+  {id:"eng",n:"Grammar and error spotting",
+   html:`<p>Thirty questions, and the composition is predictable: <b>error spotting</b>, <b>sentence improvement</b>, <b>fillers</b>, and a <b>reading comprehension</b> passage or two (often economy or business themed, which your ESI reading directly supports).</p>
    <p>On comprehension, read the questions first only for vocabulary and specific-detail items; for inference and tone questions, read the passage properly. The reliable trap is the option that is true in the world but not stated in the passage — the correct answer is always the one the passage supports.</p>
    <p>On grammar, five error families produce most questions: <b>subject-verb agreement</b> (especially with intervening phrases — "the set of rules <i>is</i>"), <b>tense consistency</b>, <b>preposition collocation</b> (comply <i>with</i>, differ <i>from</i>, averse <i>to</i>, capable <i>of</i>), <b>article usage</b>, and <b>parallelism</b> in lists. Learning those five families is worth more than a vocabulary app.</p>
-   <p>For para jumbles, find the opening sentence (independent, usually with a full noun rather than a pronoun) and the chains — pronoun references, connectives like however and therefore, and repeated keywords link consecutive sentences. Order the pairs before you order the whole.</p>`,
-   keys:["RC answers must be supported by the passage, not by the world","Five error families: agreement, tense, prepositions, articles, parallelism","Para jumbles: identify the independent opening sentence, then link by pronouns and connectives","Economy-themed passages reward your ESI reading — treat them as free marks"],
-   pyq:[{q:"Identify the error: 'The committee, along with its advisers, have submitted their report.'",a:"'Have' should be 'has'. The subject is 'the committee', singular; 'along with its advisers' is a parenthetical phrase and does not change the number of the subject. This intervening-phrase trap is the most frequently tested agreement error in banking exams.",tag:"Phase I · grammar"}],
+   <p>Two grammar rules outside those five families come up often enough to name separately. <b>Active-to-passive</b> conversion shifts the object into subject position and the verb into a "be + past participle" form — "the RBI raised the rate" becomes "the rate was raised by the RBI" — and questions usually test whether you preserve the original tense through the conversion. <b>Direct-to-indirect speech</b> shifts tense back one step (present becomes past, past becomes past perfect) and changes pronouns and time-references ("today" becomes "that day") to match the reporting context — the tense-shift is the detail most often missed.</p>`,
+   keys:["RC answers must be supported by the passage, not by the world","Five error families: agreement, tense, prepositions, articles, parallelism","Passive voice: preserve the original tense through the conversion — that's what's actually tested","Indirect speech: tense shifts back one step, and time-references change ('today' → 'that day')"],
+   pyq:[{q:"Identify the error: 'The committee, along with its advisers, have submitted their report.'",a:"'Have' should be 'has'. The subject is 'the committee', singular; 'along with its advisers' is a parenthetical phrase and does not change the number of the subject. This intervening-phrase trap is the most frequently tested agreement error in banking exams.",tag:"Phase I · grammar"},
+   {q:"Convert to indirect speech: He said, 'I am going to the bank today.'",a:"He said that he was going to the bank that day. Three shifts happen simultaneously: 'am going' (present continuous) steps back to 'was going' (past continuous); 'I' becomes 'he' to match the reporting perspective; and 'today' becomes 'that day' since the reporting may happen at a different time than the original statement.",tag:"Phase I · grammar"}],
    quiz:[
    {q:"Choose the correct form: 'Each of the candidates ___ required to submit a declaration.'",o:["are","is","were","have been"],a:1,e:"'Each' is singular regardless of the plural noun that follows in the prepositional phrase."},
    {q:"Correct collocation: 'The bank must comply ___ the regulator's direction.'",o:["to","with","for","in"],a:1,e:"Comply with. Adhere to, conform to, comply with — the preposition is fixed by the verb."},
-   {q:"In a para jumble, the opening sentence typically:",o:["Begins with a pronoun","Introduces the subject with a full noun and no back-reference","Contains 'however'","Summarises the conclusion"],a:1,e:"Back-references — pronouns, 'this', 'such' — signal a sentence that depends on an earlier one."}]},
+   {q:"Passive voice of 'The RBI has raised the repo rate':",o:["The repo rate was raised by the RBI","The repo rate has been raised by the RBI","The repo rate is raised by the RBI","The repo rate raised by the RBI"],a:1,e:"The original tense (present perfect) must be preserved through the conversion: 'has raised' → 'has been raised'."},
+   {q:"Indirect speech of 'She said, \"I will call you tomorrow.\"':",o:["She said that she will call me tomorrow","She said that she would call me the next day","She said she calls me tomorrow","She said that I will call her tomorrow"],a:1,e:"'Will' steps back to 'would', and 'tomorrow' becomes 'the next day' to match the reporting context."}]},
+
+  {id:"cloze",n:"Cloze test, para jumbles and sentence improvement",
+   html:`<p>Three formats, one shared skill: reading for the logical and grammatical connections between sentences or blanks, rather than word by word.</p>
+   <p>A <b>cloze test</b> removes several words from a passage; the trap is picking the option that is grammatically correct in isolation but doesn't fit the passage's register or logical flow — always read one sentence before and after the blank, not just the blank's immediate clause, before choosing.</p>
+   <p><b>Para jumbles</b> reward finding structure before attempting an order. Identify the <b>independent opening sentence</b> — it introduces the subject with a full noun, never a pronoun or a back-reference like "this" or "such." Then find the <b>chains</b>: sentences linked by pronoun reference (a "it" or "they" pointing to something named in an earlier sentence), by connectives ("however," "therefore," "in contrast"), or by a repeated keyword. Order the pairs and triples first, then assemble the whole passage from those fixed chains rather than testing all orderings from scratch.</p>
+   <p><b>Sentence improvement</b> questions present a sentence with an underlined portion and ask for the best replacement — including "no improvement needed" as a valid option that candidates too often avoid out of a reflex to change something. The discipline: identify what's actually wrong (or confirm nothing is) before scanning the options, rather than picking whichever option merely sounds different from the original.</p>`,
+   keys:["Cloze: read a full sentence around the blank, not just its immediate clause — register and logic matter as much as grammar","Para jumbles: find the independent opening sentence first — full noun, no back-reference","Chain sentences by pronoun reference, connectives, or repeated keyword before ordering the whole set","Sentence improvement: diagnose the actual error first — 'no improvement' is a genuine, frequently correct option"],
+   pyq:[{q:"How do you identify the opening sentence of a para jumble?",a:"It introduces the subject or topic with a full noun phrase and contains no word that refers back to something not yet mentioned — no 'this', 'it', 'such', or 'however' pointing at an antecedent. If two sentences both look plausible as openers, check which one the other sentences' pronouns and connectives actually point back to — only the true opener will have later sentences referring to it, not the other way around.",tag:"Phase I · para jumbles"}],
+   quiz:[
+   {q:"In a para jumble, a sentence beginning with 'However, this approach failed because...' is:",o:["Likely the opening sentence","Likely a middle or later sentence, since 'this approach' refers back to something already introduced","Definitely the closing sentence","Impossible to place without more information"],a:1,e:"'However' and 'this approach' are both back-references — a strong signal the sentence follows, rather than opens, the passage."},
+   {q:"In a cloze test, the best strategy for a blank is to:",o:["Consider only the words immediately touching the blank","Read a full sentence around the blank, including logical flow from neighbouring sentences","Pick the most grammatically complex option","Always choose the shortest option"],a:1,e:"Register and logical fit across sentences matter as much as the blank's immediate grammar."},
+   {q:"'No improvement needed' as an option in a sentence-improvement question is:",o:["Never the correct answer","A trap that should always be avoided","A genuine, sometimes correct option that should be considered like any other","Only correct for short sentences"],a:2,e:"Candidates under-select it out of a reflex to 'find' an error — it should be evaluated on the same footing as every other option."}]},
 
   {id:"desc",n:"Phase II descriptive writing: essay, précis, comprehension",sim:"essay",
    html:`<p>Paper II is a hundred marks of writing in ninety minutes, typed on screen, and it counts fully toward the final merit. It usually comprises an <b>essay</b>, a <b>précis</b> and a <b>reading comprehension</b> — and unlike the other papers, the content comes from the ESI and FM syllabus you are already preparing. That is the leverage: an essay on financial inclusion or inflation targeting is a Finance answer in prose.</p>
@@ -1126,11 +1416,12 @@ function trkPct(){var n=0;TOPICS.forEach(function(t){var x=trkGet(t._key);n+=(x.
 
 /* ============ HOME ============ */
 function renderHome(){
+  var totalT=TOPICS.length, totalQ=allQuiz().length;
   var h='<div class="hero"><div>'
    +'<p class="eyebrow">Phase I · Phase II · Interview — one system</p>'
    +'<h1 class="big">Learn it the way the <i>corridor</i> works</h1>'
-   +'<p class="sub">Subject → chapter → topic, with a simulator wherever a concept is easier to <b>move</b> than to read. Every topic carries key points you can reproduce from memory, past-paper patterns with model answers, and a quiz that tells you whether you actually learned it.</p>'
-   +'<div class="row-cta"><a class="btn fill" href="#/c/esi/e1">Start with ESI</a><a class="btn" href="#/tests">Take a test</a><a class="btn qt" href="#/plan">The 90-minute plan</a><a class="btn qt" href="#/pyq">PYQ bank</a></div></div>'
+   +'<p class="sub">Subject → chapter → topic, with a simulator wherever a concept is easier to <b>move</b> than to read. '+totalT+' topics, each with key points you can reproduce from memory, past-paper patterns with model answers, and a quiz that tells you whether you actually learned it.</p>'
+   +'<div class="row-cta"><a class="btn fill" href="#/contents">See the full contents ('+totalT+' topics)</a><a class="btn" href="#/tests">Take a test</a><a class="btn qt" href="#/plan">The 90-minute plan</a></div></div>'
    +'<div id="heroSim"></div></div>';
 
   h+='<section class="blk"><h2 class="blk">What the exam actually is</h2><div class="prose"><p>Phase I is a two-hour screening paper — 200 questions, 200 marks, sectional timing, a quarter-mark penalty per error, and <b>no contribution to the final merit</b>. Phase II is where the exam is won: three papers of 100 marks each, two of them mixing objective and descriptive, plus a 75-mark interview. Final merit is out of 375.</p></div>'
@@ -1147,7 +1438,7 @@ function renderHome(){
    +'<div class="sim" id="demoCorridor"></div>'
    +'<p class="figcap">The LAF corridor. SDF is the floor, MSF the ceiling, repo the policy rate in between; the weighted average call rate is the operating target. Illustrative — current settings are repo 5.25%, SDF 5.00%, MSF 5.50%, CRR 3.00%, SLR 18.00%.</p></section>';
 
-  h+='<section class="blk"><h2 class="blk">The syllabus</h2><div class="subs">';
+  h+='<section class="blk"><h2 class="blk">The syllabus</h2><p class="lead" style="margin-bottom:18px">Four subjects, '+DATA.reduce(function(n,s){return n+s.chapters.length},0)+' chapters, '+totalT+' topics. This is a browsing view — for the complete topic-by-topic list, go to <a href="#/contents">full contents</a>.</p><div class="subs">';
   DATA.forEach(function(s){
     h+='<div class="sub"><span class="tg">'+s.tag+'</span><h3><a href="#/c/'+s.id+"/"+s.chapters[0].id+'">'+s.name+'</a></h3><p>'+s.blurb+'</p><ul class="chl">';
     s.chapters.forEach(function(c,ci){
@@ -1158,9 +1449,10 @@ function renderHome(){
   h+='</div></section>';
 
   h+='<section class="blk"><h2 class="blk">And the rest of the machine</h2><div class="cards">'
+   +'<div class="card"><h4><a href="#/contents">Full contents</a></h4><p>Every topic across every chapter in one scannable page — the fastest way to see exactly what is and isn\'t covered.</p><span class="mono">'+totalT+' topics</span></div>'
    +'<div class="card"><h4><a href="#/pyq">PYQ bank</a></h4><p>The question patterns that repeat, with model answers written the way you would say them in the descriptive paper or the interview.</p><span class="mono">'+TOPICS.reduce(function(n,t){return n+(t.pyq||[]).length},0)+' patterns</span></div>'
-   +'<div class="card"><h4><a href="#/tests">Tests and mocks</a></h4><p>Chapter quizzes, subject-wide tests and a timed mock with the real −0.25 penalty, so accuracy costs you what it costs in the hall.</p><span class="mono">'+allQuiz().length+' questions in the bank</span></div>'
-   +'<div class="card"><h4><a href="#/tracker">Revision tracker</a></h4><p>Read it, drilled the PYQs, recalled it closed-book, revised it. Four boxes per topic — the grid shows where the loop will find you.</p><span class="mono">'+TOPICS.length+' topics · saved on this device</span></div>'
+   +'<div class="card"><h4><a href="#/tests">Tests and mocks</a></h4><p>Chapter quizzes, subject-wide tests and a timed mock with the real −0.25 penalty, so accuracy costs you what it costs in the hall.</p><span class="mono">'+totalQ+' questions in the bank</span></div>'
+   +'<div class="card"><h4><a href="#/tracker">Revision tracker</a></h4><p>Read it, drilled the PYQs, recalled it closed-book, revised it. Four boxes per topic — the grid shows where the loop will find you.</p><span class="mono">'+totalT+' topics · saved on this device</span></div>'
    +'<div class="card"><h4><a href="#/plan">The one-year plan</a></h4><p>A 90-minute daily block, a highlighting system, the 1-3-7-21 revision rule and a month-by-month roadmap.</p><span class="mono">547 hours a year, spent well</span></div>'
    +'<div class="card"><h4><a href="#/books">Books and reports</a></h4><p>What to read, what to skim, and what to extract from each — mapped to the chapter it serves.</p><span class="mono">'+BOOKS.length+' sources</span></div>'
    +'</div></section>';
@@ -1425,8 +1717,37 @@ function renderBooks(){
   $("#books-in").innerHTML=h;
 }
 
+/* ============ FULL CONTENTS ============ */
+function renderContents(){
+  var totalT=TOPICS.length, totalQ=allQuiz().length, totalP=TOPICS.reduce(function(n,t){return n+(t.pyq||[]).length},0);
+  var h='<p class="crumb"><a href="#/">Home</a> · Full contents</p><h1 class="pg">Every subject, chapter and topic</h1>'
+   +'<p class="lead">The whole map in one scroll — '+totalT+' topics across '+DATA.length+' subjects, '+totalQ+' quiz questions, '+totalP+' PYQ patterns. Click any topic to go straight to it. Use this page to see exactly what is and isn\'t covered, rather than guessing from chapter names alone.</p>'
+   +'<div class="ro-wrap" style="margin:20px 0">'
+   +'<div class="ro"><div class="v">'+totalT+'</div><div class="k">topics</div></div>'
+   +'<div class="ro"><div class="v">'+DATA.reduce(function(n,s){return n+s.chapters.length},0)+'</div><div class="k">chapters</div></div>'
+   +'<div class="ro"><div class="v">'+totalQ+'</div><div class="k">quiz questions</div></div>'
+   +'<div class="ro"><div class="v">'+totalP+'</div><div class="k">PYQ patterns</div></div>'
+   +'</div>';
+  DATA.forEach(function(s){
+    h+='<div style="margin:30px 0 10px"><span class="tg" style="font-family:var(--mono);font-size:11px;letter-spacing:.1em;color:var(--gold)">'+s.tag+'</span><h2 style="font-size:28px;margin:6px 0 4px">'+s.name+'</h2><p style="color:var(--mid);font-size:14.5px;margin:0 0 14px;max-width:74ch">'+s.blurb+'</p></div>';
+    s.chapters.forEach(function(c,ci){
+      h+='<div style="border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px;background:var(--panel2)">'
+        +'<div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px 14px;margin-bottom:8px">'
+        +'<span style="font-family:var(--display);font-size:19px"><a href="#/c/'+s.id+"/"+c.id+'" style="color:var(--ink)">'+(ci+1)+'. '+c.name+'</a></span>'
+        +'<span style="font-family:var(--mono);font-size:11.5px;color:var(--dim)">'+c.topics.length+' topics · '+c.topics.reduce(function(n,t){return n+(t.quiz||[]).length},0)+' quiz Qs</span></div>'
+        +'<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px 16px">';
+      c.topics.forEach(function(t){
+        h+='<a href="'+t._path+'" style="display:flex;gap:8px;padding:4px 0;color:var(--mid);font-size:14px"><span style="font-family:var(--mono);font-size:11.5px;color:var(--dim);min-width:32px">'+t._num+'</span><span>'+t.n+(t.sim?' <span style="color:var(--green);font-size:11px" title="has an interactive simulator">◆</span>':'')+'</span></a>';
+      });
+      h+='</div></div>';
+    });
+  });
+  h+='<p class="simnote" style="margin-top:8px">◆ marks a topic with a live interactive simulator.</p>';
+  $("#contents-in").innerHTML=h;
+}
+
 /* ============ ROUTER ============ */
-var PAGES={home:$("#p-home"),chapter:$("#p-chapter"),pyq:$("#p-pyq"),tests:$("#p-tests"),tracker:$("#p-tracker"),plan:$("#p-plan"),books:$("#p-books")};
+var PAGES={home:$("#p-home"),chapter:$("#p-chapter"),pyq:$("#p-pyq"),tests:$("#p-tests"),tracker:$("#p-tracker"),plan:$("#p-plan"),books:$("#p-books"),contents:$("#p-contents")};
 var built={};
 function route(){
   var raw=location.hash.replace(/^#\/?/,""),p=raw.split("/").filter(Boolean),key="home",title="The Corridor — RBI Grade B, learned interactively",scroll=null;
@@ -1438,6 +1759,7 @@ function route(){
   else if(p[0]==="tracker"){key="tracker";renderTracker();title="Tracker · The Corridor"}
   else if(p[0]==="plan"){key="plan";if(!built.plan){renderPlan();built.plan=1}title="Study plan · The Corridor"}
   else if(p[0]==="books"){key="books";if(!built.books){renderBooks();built.books=1}title="Sources · The Corridor"}
+  else if(p[0]==="contents"){key="contents";renderContents();title="Full contents · The Corridor"}
   else {key="home";if(!built.home){renderHome();built.home=1}}
   Object.keys(PAGES).forEach(function(k){PAGES[k].classList.toggle("on",k===key)});
   document.title=title;
@@ -1452,7 +1774,7 @@ window.addEventListener("hashchange",route);
 var IDX=[];
 TOPICS.forEach(function(t){IDX.push({k:t._num,t:t.n+" — "+t._c.name,h:t._path,x:(t.keys||[]).join(" ")+" "+t.n+" "+t._c.name+" "+t._s.name})});
 DATA.forEach(function(s){s.chapters.forEach(function(c){IDX.push({k:"ch",t:c.name+" — "+s.name,h:"#/c/"+s.id+"/"+c.id,x:c.name+" "+s.name+" "+c.intro})})});
-[["PYQ","PYQ bank — model answers","#/pyq"],["Tests","Timed tests and chapter drills","#/tests"],["Plan","The 90-minute daily plan","#/plan"],["Track","Revision tracker","#/tracker"],["Books","Books, reports and reading cadence","#/books"]]
+[["Contents","Full syllabus — every subject, chapter and topic","#/contents"],["PYQ","PYQ bank — model answers","#/pyq"],["Tests","Timed tests and chapter drills","#/tests"],["Plan","The 90-minute daily plan","#/plan"],["Track","Revision tracker","#/tracker"],["Books","Books, reports and reading cadence","#/books"]]
  .forEach(function(o){IDX.push({k:o[0],t:o[1],h:o[2],x:o[1]})});
 var ov=$("#sov"),sin=$("#sin"),sres=$("#sres"),sel=0,cur=[];
 function openSearch(){ov.classList.add("on");sin.value="";draws("");sin.focus()}
@@ -2295,6 +2617,398 @@ SIMS.block=function(host){
   h+='</div><p class="simnote" style="margin-top:10px">Weekday shape. Saturday: 45 revision · 30 PYQs · 15 error notebook. Sunday: 45 test · 30 analysis · 15 whole-week recall. Ninety minutes, every day, adds up to roughly 547 hours across a year.</p>';
   host.innerHTML=h;
 };
+
+/* ============ banking history stepper ============ */
+SIMS.bankhist=function(host){
+  makeStepper(host,"Indian banking, five phases","step through the arc",[
+   ["1770-1947 · Colonial banking","Presidency banks (Bengal, Bombay, Madras) merge into the Imperial Bank in 1921; RBI established 1935","Imperial Bank"],
+   ["1947-1969 · Early independence","RBI nationalised 1949; State Bank of India formed 1955 from the Imperial Bank; focus on stability","SBI formed 1955"],
+   ["1969-1991 · Social banking","14 banks nationalised 1969, 6 more in 1980; directed credit, branch expansion into rural India, priority sector lending begins","90%+ deposits, public sector"],
+   ["1991-2000 · Prudential reform","Narasimham-I; CRR/SLR reduced, interest rates freed, new private banks licensed (ICICI, HDFC, Axis-era entrants)","Financial repression ends"],
+   ["2000-2014 · Consolidation & technology","Core banking, RTGS/NEFT rollout, Narasimham-II follow-through, foreign bank expansion","Electronic payments begin"],
+   ["2014-now · Inclusion & digital","Jan Dhan, UPI, differentiated licences (payments/small finance banks), IBC, PCA framework, digital lending rules","JAM trinity, UPI scale"]
+  ],[
+   "Banking history compresses into six phases. Placing any current question in this arc — 'is this a 1969-style directed-credit move, or a 1991-style prudential one?' — is a fast way to sound prepared.",
+   "The Imperial Bank combined commercial banking with some central-bank-like functions before the RBI existed — a fact worth knowing precisely because 'RBI was India's first central bank' is technically true only from 1935.",
+   "SBI's formation via the SBI Act, 1955 (taking over the Imperial Bank, with the RBI holding a majority stake) is the direct ancestor of today's largest public sector bank.",
+   "This is the phase most exam questions probe hardest: nationalisation's stated goal was rural reach and priority-sector credit, at the cost of profitability and prudential discipline — exactly the imbalance 1991 was built to correct.",
+   "Narasimham-I is the hinge: CRR/SLR cuts freed up lendable resources, capital adequacy and asset classification norms arrived, and competition returned via new private bank licences.",
+   "Technology did quietly what regulation alone couldn't — core banking and electronic settlement made nationwide, real-time banking possible for the first time.",
+   "The current phase pairs inclusion (reach) with digitisation (efficiency) — Jan Dhan plus UPI is the 2014-era answer to the same rural-access problem 1969 tried to solve with nationalisation, using technology instead of ownership."
+  ],"Advance the phase");
+};
+
+/* ============ reform committees explorer ============ */
+SIMS.reformcomm=function(host){
+  makeExplorer(host,"Financial reform committees","click to see the recommendation",[
+   {t:"Narasimham-I (1991)",info:"Reduce CRR/SLR over time, free interest rates, introduce capital adequacy and asset classification norms, permit new private bank entry. The reform agenda's founding document."},
+   {t:"Narasimham-II (1998)",info:"Stronger capital norms, consolidation through mergers of weak banks into strong ones, and a mechanism for resolving bad loans — an early ancestor of what became the IBC/ARC approach."},
+   {t:"Verma Committee (1999)",info:"A specific restructuring framework for weak public sector banks identified as 'weak banks' — narrower and more operational than Narasimham's broad agenda."},
+   {t:"Raghuram Rajan Committee (2009)",info:"A comprehensive financial sector reform agenda pushing competition and inclusion — its institutional-coordination recommendations fed into the creation of the FSDC in 2010."},
+   {t:"Nachiket Mor Committee (2013-14)",info:"Universal financial inclusion — recommended the differentiated licences that became Payments Banks and Small Finance Banks."},
+   {t:"P J Nayak Committee (2014)",info:"Public sector bank governance — identified government ownership itself as a governance constraint, proposed an arm's-length Bank Investment Company (not implemented)."},
+   {t:"Urjit Patel Committee (2014)",info:"Monetary policy framework — recommended CPI as the nominal anchor and a Monetary Policy Committee, enacted via the 2016 RBI Act amendment."}
+  ]);
+};
+
+/* ============ budget process stepper ============ */
+SIMS.budgetflow=function(host){
+  makeStepper(host,"The Budget cycle","from drafting to enactment",[
+   ["Pre-Budget consultations","Finance Ministry consults stakeholders — industry, states, economists","Aug-Dec"],
+   ["Halwa ceremony & lockdown","Budget-printing staff enter a security lockdown until presentation","Late Jan"],
+   ["Presentation, 1 February","The Finance Minister presents the Annual Financial Statement in Lok Sabha","Article 112"],
+   ["General discussion","Parliament debates broad principles, no voting on individual items yet","~2-3 weeks"],
+   ["Demands for Grants & voting","Each ministry's spending is voted on individually in Lok Sabha","Committee scrutiny"],
+   ["Appropriation Bill","Legalises withdrawal from the Consolidated Fund for the voted amounts","Passed"],
+   ["Finance Bill passed","Enacts the tax proposals; must pass within 75 days of introduction","Within 75 days"],
+   ["Financial year begins, 1 April","The Budget takes effect","FY starts"]
+  ],[
+   "Eight steps from drafting to a functioning Budget. Knowing the sequence — and which steps involve a vote and which don't — is asked directly.",
+   "A genuine, still-followed ritual: the 'Halwa ceremony' marks the start of the printing process, after which the printing staff are isolated to prevent leaks — worth knowing as a colour fact, not just trivia, since general awareness sections do ask it.",
+   "Since 2017, presented on 1 February rather than the last day of February — moved up specifically to give ministries a full quarter to plan spending before the financial year starts.",
+   "No amendments or votes happen here — it's a general debate on the Budget's direction and philosophy.",
+   "This is where Parliament's actual budgetary power sits — each ministry's Demand for Grants can be reduced (a 'cut motion') though full rejection is rare in practice.",
+   "The Appropriation Bill is what legally permits money to leave the Consolidated Fund — the Demands for Grants alone don't authorise withdrawal.",
+   "The Finance Bill carries the tax law changes and must be enacted within 75 days of introduction under the Provisional Collection of Taxes framework.",
+   "India's financial year runs 1 April to 31 March — a colonial-era convention that periodic committees have proposed changing to the calendar year, without success so far."
+  ],"Move to the next step");
+};
+
+/* ============ scheme explorer ============ */
+SIMS.schemeexp=function(host){
+  makeExplorer(host,"Major schemes","click for the four facts",[
+   {t:"PM-KISAN",info:"<b>Does:</b> ₹6,000/year income support to land-owning farmer families, in 3 instalments. <b>Ministry:</b> Agriculture & Farmers Welfare. <b>Scale:</b> covers roughly 9-11 crore farmers. <b>Critique:</b> excludes landless tenant farmers and sharecroppers, who arguably need support most."},
+   {t:"Ayushman Bharat PM-JAY",info:"<b>Does:</b> ₹5 lakh/family/year hospitalisation cover, cashless and paperless. <b>Ministry:</b> Health & Family Welfare. <b>Scale:</b> targets the bottom ~40% via the SECC database, the world's largest health assurance scheme by beneficiary count. <b>Critique:</b> hospital empanelment concentrated in some states, primary care and outpatient costs not covered."},
+   {t:"MGNREGA",info:"<b>Does:</b> legal guarantee of 100 days of unskilled wage employment per rural household per year. <b>Ministry:</b> Rural Development. <b>Scale:</b> the largest employment guarantee programme in the world by design. <b>Critique:</b> chronic payment delays, wage rates below state minimum wages in some states, demand-driven but supply-constrained in practice."},
+   {t:"PMAY (Housing for All)",info:"<b>Does:</b> interest subsidy and direct assistance for affordable housing construction, urban and rural components. <b>Ministry:</b> Housing & Urban Affairs / Rural Development. <b>Scale:</b> crores of houses sanctioned since 2015. <b>Critique:</b> land availability and titling issues in urban areas slow completion relative to sanction."},
+   {t:"Jan Dhan Yojana",info:"<b>Does:</b> zero-balance bank accounts with RuPay debit card and accident insurance, the base layer of the JAM trinity. <b>Ministry:</b> Finance. <b>Scale:</b> 50+ crore accounts opened since 2014. <b>Critique:</b> account ownership far outpaced active usage in the early years — dormancy was a genuine early problem, improving over time."},
+   {t:"PLI (Production Linked Incentive)",info:"<b>Does:</b> cash incentives tied to incremental sales/production in target sectors (electronics, pharma, textiles, and more). <b>Ministry:</b> DPIIT, plus sector ministries. <b>Scale:</b> 14 sectors covered. <b>Critique:</b> uneven uptake across sectors, and a fiscal cost that needs weighing against the manufacturing-share gains it aims to produce."},
+   {t:"Atal Pension Yojana (APY)",info:"<b>Does:</b> a guaranteed minimum pension (₹1,000-5,000/month) for informal-sector workers who contribute during their working years. <b>Ministry:</b> Finance, via PFRDA. <b>Scale:</b> targeted at the unorganised sector, which lacks employer-linked pension coverage. <b>Critique:</b> the guarantee is subsidised by the government, raising a long-run contingent-liability question."}
+  ]);
+};
+
+/* ============ bank structure explorer ============ */
+SIMS.bankstruct=function(host){
+  makeExplorer(host,"Types of banks in India","click a branch",[
+   {t:"Scheduled banks",info:"Included in the Second Schedule of the RBI Act — access RBI refinance and clearing facilities. Most banks Indians deal with are scheduled. Independent of ownership type."},
+   {t:"Public sector banks",d:1,info:"Majority government-owned. The product of the 1969/1980 nationalisations, later consolidated through mergers (e.g. into fewer, larger entities from 2017-2020)."},
+   {t:"Private sector banks",d:1,info:"Old private banks pre-date 1969's nationalisation and were simply not nationalised; new private banks were licensed from 1993 onward following Narasimham-I."},
+   {t:"Foreign banks",d:1,info:"Operate via branches or, since 2013 guidelines, may set up Wholly Owned Subsidiaries in India, which brings them under fuller domestic regulatory treatment."},
+   {t:"Regional Rural Banks",d:1,info:"Owned 50% Centre / 35% sponsor public sector bank / 15% state. Created 1975 to blend a cooperative bank's local reach with commercial banking discipline."},
+   {t:"Cooperative banks",d:1,info:"Urban and rural/state cooperative banks. Historically dual-regulated (RBI + state Registrar of Cooperative Societies); brought under fuller RBI supervision by the 2020 amendment after governance failures."},
+   {t:"Small Finance Banks",d:1,info:"Full banking licence for underserved segments — 75% priority sector lending target, majority small-ticket loans. Recommended by the Nachiket Mor Committee."},
+   {t:"Payments Banks",d:1,info:"Deposits capped per customer, no lending, no credit cards — must hold deposits mostly in government securities. The other Nachiket Mor-recommended licence."},
+   {t:"Local Area Banks",d:1,info:"A smaller, largely historical category licensed to operate in a limited local area — few remain active, but the category is still referenced in objective questions."}
+  ]);
+};
+
+/* ============ mutual fund NAV/SIP ============ */
+SIMS.mfnav=function(host){
+  simShell(host,"NAV, lump sum vs SIP","rupee-cost averaging in action",
+   '<p class="simnote" style="margin:0 0 10px">Five months of a volatile NAV. Compare investing ₹10,000 as a lump sum in month 1 against ₹2,000 every month (SIP).</p>'
+   +'<div class="row"><div><label>month 2 NAV — <b class="n2l"></b></label><input type="range" class="n2" min="5" max="20" step="0.5" value="8"></div>'
+   +'<div><label>month 3 NAV — <b class="n3l"></b></label><input type="range" class="n3" min="5" max="20" step="0.5" value="6"></div>'
+   +'<div><label>month 4 NAV — <b class="n4l"></b></label><input type="range" class="n4" min="5" max="20" step="0.5" value="9"></div>'
+   +'<div><label>month 5 NAV — <b class="n5l"></b></label><input type="range" class="n5" min="5" max="20" step="0.5" value="12"></div></div>'
+   +'<div class="ro-wrap" style="margin-top:12px"><div class="ro"><div class="v v-lump"></div><div class="k">lump sum: units bought</div></div><div class="ro"><div class="v v-sip"></div><div class="k">SIP: units bought</div></div><div class="ro warn"><div class="v v-lumpval"></div><div class="k">lump sum value at month 5 NAV</div></div><div class="ro"><div class="v v-sipval"></div><div class="k">SIP value at month 5 NAV</div></div></div>'
+   +'<div class="verdict vd"></div>');
+  var n2=$(".n2",host),n3=$(".n3",host),n4=$(".n4",host),n5=$(".n5",host);
+  function draw(){
+    var navs=[10,+n2.value,+n3.value,+n4.value,+n5.value];
+    $(".n2l",host).textContent="₹"+f1(navs[1]);$(".n3l",host).textContent="₹"+f1(navs[2]);$(".n4l",host).textContent="₹"+f1(navs[3]);$(".n5l",host).textContent="₹"+f1(navs[4]);
+    var lumpUnits=10000/navs[0];
+    var sipUnits=0;navs.forEach(function(nv){sipUnits+=2000/nv});
+    var finalNav=navs[4];
+    var lumpVal=lumpUnits*finalNav, sipVal=sipUnits*finalNav;
+    $(".v-lump",host).textContent=f2(lumpUnits);
+    $(".v-sip",host).textContent=f2(sipUnits);
+    $(".v-lumpval",host).textContent="₹"+fmt(lumpVal);
+    $(".v-sipval",host).textContent="₹"+fmt(sipVal);
+    $(".vd",host).innerHTML=sipVal>lumpVal
+      ?"<b>SIP wins here.</b> Because the NAV dipped in the middle months, the SIP bought more units at those lower prices — rupee-cost averaging — so its total unit count, and therefore its final value, beats the lump sum for the same ₹10,000 total invested."
+      :"<b>Lump sum wins here.</b> When the NAV mostly rose, buying everything early at month 1's lower price beats spreading the purchase out — SIP's averaging benefit only shows up when prices dip along the way, not when they mostly climb. Neither is universally better; it depends on the path prices actually take, which nobody knows in advance.";
+  }
+  [n2,n3,n4,n5].forEach(function(x){x.addEventListener("input",draw)});draw();
+};
+
+/* ============ percent-fraction trainer ============ */
+SIMS.percentfrac=function(host){
+  var PAIRS=[[12.5,"1/8"],[16.67,"1/6"],[20,"1/5"],[25,"1/4"],[33.33,"1/3"],[37.5,"3/8"],[40,"2/5"],[41.67,"5/12"],[50,"1/2"],[60,"3/5"],[62.5,"5/8"],[66.67,"2/3"],[75,"3/4"],[80,"4/5"],[83.33,"5/6"],[87.5,"7/8"]];
+  simShell(host,"Percentage ↔ fraction, on sight","the fastest DI speed gain there is",
+   '<p class="qstem pf-q" style="margin-bottom:10px"></p>'
+   +'<div class="row"><div><input type="text" class="pf-in" placeholder="type as a/b, e.g. 3/8" style="width:100%"></div><div><button class="btn fill pf-chk">Check</button></div><div><button class="btn qt pf-nx">New number →</button></div></div>'
+   +'<div class="verdict vd" style="margin-top:10px"></div>');
+  var i=Math.floor(Math.random()*PAIRS.length);
+  function draw(){$(".pf-q",host).textContent=PAIRS[i][0]+"% = ?";$(".pf-in",host).value="";$(".vd",host).innerHTML=""}
+  $(".pf-chk",host).addEventListener("click",function(){
+    var v=$(".pf-in",host).value.trim(),parts=v.split("/"),ok=false;
+    if(parts.length===2){var num=parseFloat(parts[0]),den=parseFloat(parts[1]);if(den)ok=Math.abs(num/den-PAIRS[i][0]/100)<0.005}
+    $(".vd",host).innerHTML=(ok?"<b style='color:var(--green)'>Correct.</b> ":"<b style='color:var(--rose)'>Not quite — it's "+PAIRS[i][1]+".</b> ")+PAIRS[i][0]+"% = "+PAIRS[i][1]+". Say it out loud a few times — recognition beats calculation every time this appears in a DI set.";
+  });
+  $(".pf-nx",host).addEventListener("click",function(){i=Math.floor(Math.random()*PAIRS.length);draw()});
+  draw();
+};
+
+/* ============ SI vs CI ============ */
+SIMS.sici=function(host){
+  simShell(host,"SI vs CI, year by year","interest earning interest",
+   '<div class="row"><div><label>principal — <b class="pl"></b></label><input type="range" class="p" min="1000" max="50000" step="1000" value="10000"></div>'
+   +'<div><label>rate — <b class="rl"></b></label><input type="range" class="r" min="2" max="20" value="10"></div>'
+   +'<div><label>years — <b class="yl"></b></label><input type="range" class="y" min="1" max="10" value="5"></div></div>'
+   +'<div class="tks" style="margin-top:12px" id="sici-bars"></div>'
+   +'<div class="ro-wrap"><div class="ro"><div class="v v-si"></div><div class="k">simple interest total</div></div><div class="ro warn"><div class="v v-ci"></div><div class="k">compound interest total</div></div><div class="ro"><div class="v v-diff"></div><div class="k">CI − SI</div></div></div>'
+   +'<div class="verdict vd"></div>');
+  var p=$(".p",host),r=$(".r",host),y=$(".y",host);
+  function draw(){
+    var P=+p.value,R=+r.value,Y=+y.value;
+    $(".pl",host).textContent="₹"+fmt(P);$(".rl",host).textContent=R+"%";$(".yl",host).textContent=Y+(Y===1?" yr":" yrs");
+    var si=P*R*Y/100, ci=P*(Math.pow(1+R/100,Y)-1);
+    $(".v-si",host).textContent="₹"+fmt(si);$(".v-ci",host).textContent="₹"+fmt(ci);$(".v-diff",host).textContent="₹"+fmt(ci-si);
+    var bars="",maxv=Math.max(si,ci);
+    for(var t=1;t<=Y;t++){
+      var siT=P*R*t/100, ciT=P*(Math.pow(1+R/100,t)-1);
+      bars+='<div style="display:flex;align-items:center;gap:8px;margin-bottom:4px"><span style="font-family:var(--mono);font-size:10px;color:var(--dim);min-width:44px">year '+t+'</span>'
+        +'<div class="bar" style="flex:1;margin:0"><i style="width:'+(siT/maxv*100)+'%;background:var(--blue)"></i></div>'
+        +'<div class="bar" style="flex:1;margin:0"><i style="width:'+(ciT/maxv*100)+'%"></i></div></div>';
+    }
+    $("#sici-bars",host).innerHTML=bars;
+    $(".vd",host).innerHTML="<b>The gap widens every year.</b> Simple interest (blue bars) adds the same amount each year; compound interest (green bars) adds more each year because it earns interest on the interest already accumulated. At "+Y+" years the gap is ₹"+fmt(ci-si)+" — and for the classic 2-year shortcut, CI−SI = P×(R/100)², which you can verify against this chart at Y=2.";
+  }
+  [p,r,y].forEach(function(x){x.addEventListener("input",draw)});draw();
+};
+
+/* ============ alligation ============ */
+SIMS.allig=function(host){
+  simShell(host,"Alligation","cross the differences diagonally",
+   '<div class="row"><div><label>cheaper item value — <b class="cl"></b></label><input type="range" class="c" min="0" max="60" value="20"></div>'
+   +'<div><label>dearer item value — <b class="dl"></b></label><input type="range" class="d" min="40" max="120" value="80"></div>'
+   +'<div><label>target mean value — <b class="ml"></b></label><input type="range" class="m" min="0" max="120" value="50"></div></div>'
+   +'<svg viewBox="0 0 320 160" style="width:100%;max-width:380px;height:auto;margin-top:10px">'
+   +'<text class="val" x="30" y="30">cheaper</text><text class="val" x="250" y="30">dearer</text>'
+   +'<text class="val cv" x="30" y="50"></text><text class="val dv" x="250" y="50"></text>'
+   +'<line x1="55" y1="45" x2="160" y2="100" stroke="var(--line)" stroke-width="1.5"/>'
+   +'<line x1="245" y1="45" x2="160" y2="100" stroke="var(--line)" stroke-width="1.5"/>'
+   +'<text class="val mv" x="140" y="120">mean</text>'
+   +'<text class="lab" x="40" y="140">dearer-mean diff →</text><text class="val diff1" x="40" y="155"></text>'
+   +'<text class="lab" x="210" y="140">mean-cheaper diff →</text><text class="val diff2" x="210" y="155"></text>'
+   +'</svg>'
+   +'<div class="ro-wrap"><div class="ro ro-r"><div class="v v-ratio"></div><div class="k">cheaper : dearer ratio</div></div></div>'
+   +'<div class="verdict vd"></div>');
+  var c=$(".c",host),d=$(".d",host),m=$(".m",host);
+  function gcd(a,b){return b?gcd(b,a%b):a}
+  function draw(){
+    var C=+c.value,D=+d.value,M=+m.value;
+    $(".cl",host).textContent=C;$(".dl",host).textContent=D;$(".ml",host).textContent=M;
+    $(".cv",host).textContent=C;$(".dv",host).textContent=D;$(".mv",host).textContent="mean "+M;
+    var valid=M>=C&&M<=D&&D>C;
+    var ro=$(".ro-r",host);
+    if(!valid){
+      $(".v-ratio",host).textContent="—";
+      $(".diff1",host).textContent="";$(".diff2",host).textContent="";
+      ro.className="ro ro-r bad";
+      $(".vd",host).innerHTML="<b>Invalid setup.</b> The mean must sit between the cheaper and dearer values, and dearer must exceed cheaper, for alligation to apply. Adjust the sliders so cheaper ≤ mean ≤ dearer.";
+      return;
+    }
+    ro.className="ro ro-r";
+    var diff1=D-M, diff2=M-C;
+    $(".diff1",host).textContent=diff1;$(".diff2",host).textContent=diff2;
+    var g=gcd(diff2,diff1)||1;
+    $(".v-ratio",host).textContent=(diff2/g)+" : "+(diff1/g);
+    $(".vd",host).innerHTML="<b>Cross the differences.</b> Dearer minus mean ("+diff1+") gives the <i>cheaper</i> item's share of the ratio; mean minus cheaper ("+diff2+") gives the <i>dearer</i> item's share. Ratio = "+(diff2/g)+" : "+(diff1/g)+" (cheaper : dearer). It feels backwards the first few times — the far difference belongs to the near item — which is exactly why redrawing the X by hand a few times makes it stick.";
+  }
+  [c,d,m].forEach(function(x){x.addEventListener("input",draw)});draw();
+};
+
+/* ============ time-speed-distance ============ */
+SIMS.tsd=function(host){
+  simShell(host,"Relative speed","approaching vs same-direction",
+   '<div class="tabs tsdm"><button class="tab on" data-v="opp">Moving toward each other</button><button class="tab" data-v="same">Moving the same direction</button></div>'
+   +'<div class="row"><div><label>speed A — <b class="al"></b></label><input type="range" class="a" min="10" max="120" value="54"></div>'
+   +'<div><label>speed B — <b class="bl"></b></label><input type="range" class="b" min="10" max="120" value="36"></div>'
+   +'<div><label>initial gap (km) — <b class="gl"></b></label><input type="range" class="g" min="10" max="300" value="90"></div></div>'
+   +'<div class="ro-wrap"><div class="ro"><div class="v v-rel"></div><div class="k">relative speed</div></div><div class="ro warn"><div class="v v-time"></div><div class="k">time to meet / catch up</div></div></div>'
+   +'<div class="verdict vd"></div>');
+  var mode="opp",a=$(".a",host),b=$(".b",host),g=$(".g",host);
+  function draw(){
+    var A=+a.value,B=+b.value,G=+g.value;
+    $(".al",host).textContent=A+" km/h";$(".bl",host).textContent=B+" km/h";$(".gl",host).textContent=G+" km";
+    var rel=mode==="opp"?A+B:Math.abs(A-B);
+    $(".v-rel",host).textContent=rel+" km/h";
+    if(rel===0){$(".v-time",host).textContent="never";$(".vd",host).innerHTML="<b>Same speed, same direction.</b> The gap never closes — relative speed is zero, so B (or A, whichever is behind) never catches up.";return}
+    var t=G/rel;
+    $(".v-time",host).textContent=f2(t)+" hr";
+    $(".vd",host).innerHTML=mode==="opp"
+      ?"<b>Approaching.</b> Relative speed is the <i>sum</i>: "+A+"+"+B+" = "+rel+" km/h. At that closing speed, a "+G+" km gap closes in "+f2(t)+" hours — the two combined speeds eat the gap together, which is why 'toward each other' problems always add."
+      :"<b>Same direction.</b> Relative speed is the <i>difference</i>: |"+A+"−"+B+"| = "+rel+" km/h. The faster one gains on the gap at only that difference each hour, so catching up a "+G+" km lead takes "+f2(t)+" hours — much longer than the approaching case for the same raw speeds, which is exactly the intuition this topic tests.";
+    $$(".tsdm .tab",host).forEach(function(x){x.classList.toggle("on",x.dataset.v===mode)});
+  }
+  $$(".tsdm .tab",host).forEach(function(x){x.addEventListener("click",function(){mode=x.dataset.v;draw()})});
+  [a,b,g].forEach(function(x){x.addEventListener("input",draw)});draw();
+};
+
+/* ============ DI table reader ============ */
+SIMS.ditab=function(host){
+  simShell(host,"Read the table, compute the ratio","the whole of DI in one habit",
+   '<div class="row"><div><label>Product B, Q3 sales (₹ lakh) — <b class="bl"></b></label><input type="range" class="b" min="50" max="300" step="10" value="140"></div></div>'
+   +'<div class="tw" style="margin-top:10px"><table class="t dit"><thead><tr><th>Product</th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th></tr></thead><tbody>'
+   +'<tr><td>A</td><td>120</td><td>150</td><td>180</td><td>200</td></tr>'
+   +'<tr><td>B</td><td>100</td><td>110</td><td class="bcell"></td><td>160</td></tr>'
+   +'<tr><td>C</td><td>90</td><td>95</td><td>100</td><td>105</td></tr>'
+   +'</tbody></table></div>'
+   +'<div class="ro-wrap"><div class="ro"><div class="v v-ratio"></div><div class="k">A : B ratio, Q3</div></div><div class="ro warn"><div class="v v-growth"></div><div class="k">B\'s Q2→Q3 growth</div></div><div class="ro"><div class="v v-share"></div><div class="k">B\'s share of Q3 total (A+B+C)</div></div></div>'
+   +'<div class="verdict vd"></div>');
+  var b=$(".b",host);
+  function draw(){
+    var B=+b.value;
+    $(".bl",host).textContent="₹"+B+" lakh";
+    $(".bcell",host).textContent=B;
+    var A=180,C=100;
+    var ratio=(function(){function gcd(x,y){return y?gcd(y,x%y):x}var g=gcd(A,B);return (A/g)+":"+(B/g)})();
+    var growth=((B-110)/110*100);
+    var share=(B/(A+B+C)*100);
+    $(".v-ratio",host).textContent=ratio;
+    $(".v-growth",host).textContent=(growth>=0?"+":"")+f1(growth)+"%";
+    $(".v-share",host).textContent=f1(share)+"%";
+    $(".vd",host).innerHTML="<b>Three questions, one table, one habit: find the exact cells, ignore the rest.</b> A:B in Q3 needs only the two Q3 cells (180 and "+B+") — not the whole table. B's growth needs only Q2 and Q3 for B (110 and "+B+"). B's share of the Q3 total needs Q3 for all three products. Notice none of these three questions required reading Q1, Q4, or any of product C's other quarters — exactly the discipline that separates a fast DI solver from someone re-reading the whole table for every sub-question.";
+  }
+  b.addEventListener("input",draw);draw();
+};
+
+/* ============ seating arrangement worked stepper ============ */
+SIMS.seating=function(host){
+  var names=["P","Q","R","S","T","U"];
+  var seats=[null,null,null,null,null,null];
+  var STEPS=[
+   ["Clue 1","'T sits at the extreme right end.'","Place the one absolute-position clue first"],
+   ["Clue 2","'Q sits third to the left of T.'","Relative to the now-fixed T"],
+   ["Clue 3","'P sits immediately to the right of Q.'","Relative to the now-fixed Q"],
+   ["Clue 4","'R and S sit together, to the left of P.'","Narrows the remaining two seats"],
+   ["Clue 5","'U is not at either extreme end.'","Negative information closes the last ambiguity"]
+  ];
+  var order=[[5,"T"],[2,"Q"],[3,"P"],[0,"R"],[1,"S"],[4,"U"]];
+  simShell(host,"Watch a linear puzzle get solved","6 seats, 5 clues — same method every time",
+   '<div class="dg seatrow" style="justify-content:center"></div>'
+   +'<div class="stepper sp2" style="margin-top:14px"></div>'
+   +'<div class="row-cta" style="margin-top:6px"><button class="btn fill go2">Apply next clue ▸</button><button class="btn qt rs2">Reset</button></div>'
+   +'<div class="verdict vd2"></div>');
+  var wrap=$(".sp2",host),i=0;
+  STEPS.forEach(function(s,k){wrap.appendChild(el("div","stp",'<span class="n">'+(k+1)+'</span><span class="lb">'+s[0]+'<small>'+s[1]+'</small></span><span class="rc">'+s[2]+'</span>'))});
+  var stp=$$(".stp",wrap);
+  function paintSeats(){
+    var row=$(".seatrow",host);
+    row.innerHTML="";
+    for(var pos=0;pos<6;pos++){
+      var occ=seats[pos];
+      row.appendChild(el("span","dgn "+(occ?"ok":"off"),"seat "+(pos+1)+"<small>"+(occ||"empty")+"</small>"));
+    }
+  }
+  function paint(){
+    stp.forEach(function(s,k){s.classList.toggle("on",k===i-1);s.classList.toggle("done",k<i-1)});
+    seats=[null,null,null,null,null,null];
+    for(var k=0;k<i;k++){seats[order[k][0]]=order[k][1]}
+    paintSeats();
+    $(".vd2",host).innerHTML=i===0?"Six seats, numbered left to right. Apply each clue in the efficient order — most constrained first — and watch the arrangement lock into place."
+      :"<b>"+STEPS[i-1][0]+" applied.</b> "+STEPS[i-1][1]+" "+(i===STEPS.length?"All clues applied — the arrangement is fully determined. Notice T (the one absolute clue) was placed first, and the negative clue about U was saved for last, exactly when it was needed to break the final ambiguity.":"Notice how each clue only became placeable because the previous one gave it something to be 'relative to'.");
+  }
+  $(".go2",host).addEventListener("click",function(){if(i<STEPS.length)i++;paint()});
+  $(".rs2",host).addEventListener("click",function(){i=0;paint()});
+  paint();
+};
+
+/* ============ direction sense ============ */
+SIMS.direction=function(host){
+  var LEGS=[["North",5],["East",3],["South",5],["East",2]];
+  simShell(host,"Trace the path","then compute the straight-line distance",
+   '<svg viewBox="0 0 300 260" style="width:100%;max-width:340px;height:auto">'
+   +'<path class="path" d="" stroke="var(--green)" stroke-width="2.5" fill="none"/>'
+   +'<circle class="start" cx="150" cy="220" r="4" fill="var(--gold)"/><text class="lab" x="158" y="224">start</text>'
+   +'<circle class="end" cx="150" cy="220" r="4" fill="var(--rose)"/>'
+   +'<line class="disp" x1="150" y1="220" x2="150" y2="220" stroke="var(--blue)" stroke-width="1.5" stroke-dasharray="4 3"/>'
+   +'</svg>'
+   +'<div class="stepper sp3"></div>'
+   +'<div class="row-cta" style="margin-top:6px"><button class="btn fill go3">Walk next leg ▸</button><button class="btn qt rs3">Reset</button></div>'
+   +'<div class="ro-wrap"><div class="ro"><div class="v v-net"></div><div class="k">straight-line distance</div></div><div class="ro mut"><div class="v v-trav"></div><div class="k">distance travelled</div></div></div>'
+   +'<div class="verdict vd3"></div>');
+  var wrap=$(".sp3",host),i=0;
+  LEGS.forEach(function(l,k){wrap.appendChild(el("div","stp",'<span class="n">'+(k+1)+'</span><span class="lb">Walk '+l[1]+' km '+l[0]+'<small>leg '+(k+1)+' of '+LEGS.length+'</small></span><span class="rc"></span>'))});
+  var stp=$$(".stp",wrap);
+  var SCALE=14;
+  function pos(upto){
+    var x=150,y=220,trav=0;
+    for(var k=0;k<upto;k++){
+      var dir=LEGS[k][0],d=LEGS[k][1];trav+=d;
+      if(dir==="North")y-=d*SCALE/5;if(dir==="South")y+=d*SCALE/5;
+      if(dir==="East")x+=d*SCALE/5;if(dir==="West")x-=d*SCALE/5;
+    }
+    return {x:x,y:y,trav:trav};
+  }
+  function paint(){
+    stp.forEach(function(s,k){s.classList.toggle("on",k===i-1);s.classList.toggle("done",k<i-1)});
+    var pts=[[150,220]];
+    for(var k=1;k<=i;k++){var p=pos(k);pts.push([p.x,p.y])}
+    $(".path",host).setAttribute("d","M"+pts.map(function(p){return f1(p[0])+" "+f1(p[1])}).join(" L"));
+    var cur=pos(i);
+    $(".end",host).setAttribute("cx",cur.x);$(".end",host).setAttribute("cy",cur.y);
+    $(".disp",host).setAttribute("x2",cur.x);$(".disp",host).setAttribute("y2",cur.y);
+    var dx=(cur.x-150)/SCALE*5, dy=-(cur.y-220)/SCALE*5;
+    var net=Math.sqrt(dx*dx+dy*dy);
+    $(".v-net",host).textContent=f2(net)+" km";
+    $(".v-trav",host).textContent=cur.trav+" km";
+    $(".vd3",host).innerHTML=i===0?"Watch each leg get walked, then read the straight-line (displacement) distance off the dashed blue line — which is almost never the same as the total distance travelled along the path."
+      :i<LEGS.length?"Leg "+i+" done: "+LEGS[i-1][1]+" km "+LEGS[i-1][0]+". Keep going — the net displacement only makes sense once every leg is walked."
+      :"<b>All legs walked.</b> Total distance travelled is "+cur.trav+" km, but straight-line distance from start is only "+f2(net)+" km — read directly off the dashed line using Pythagoras on the net north-south and east-west displacement. This gap between 'distance travelled' and 'net displacement' is exactly what direction-sense questions test.";
+  }
+  $(".go3",host).addEventListener("click",function(){if(i<LEGS.length)i++;paint()});
+  $(".rs3",host).addEventListener("click",function(){i=0;paint()});
+  paint();
+};
+
+/* ============ vocabulary flashcards ============ */
+SIMS.vocab=function(host){
+  var WORDS=[
+   ["Austere","Severe, simple, without luxury or decoration"],
+   ["Meticulous","Showing great attention to detail; extremely careful"],
+   ["Candid","Truthful and straightforward; frank"],
+   ["Fastidious","Very attentive to detail; hard to please"],
+   ["Pragmatic","Dealing with things sensibly and realistically"],
+   ["Ambiguous","Open to more than one interpretation; unclear"],
+   ["Austerity","Difficult economic conditions from reduced government spending"],
+   ["Ephemeral","Lasting for a very short time"],
+   ["Prudent","Acting with care and thought for the future"],
+   ["Volatile","Liable to change rapidly and unpredictably"],
+   ["Plutocracy","Government by the wealthy"],
+   ["Philanthropist","A person who works to promote others' welfare, often via donations"]
+  ];
+  var i=0,revealed=false,right=0,wrong=0;
+  simShell(host,"Vocabulary flashcards","reveal, self-mark, move on",
+   '<div style="min-height:90px"><p class="qstem vc-w" style="font-size:22px;font-family:var(--display)"></p><p class="qstem vc-m" style="color:var(--mid);display:none"></p></div>'
+   +'<div class="row-cta"><button class="btn fill vc-rev">Reveal meaning</button><button class="btn vc-r" style="display:none">I knew it ✓</button><button class="btn vc-w2" style="display:none">Missed it ✗</button></div>'
+   +'<div class="ro-wrap" style="margin-top:12px"><div class="ro"><div class="v vc-right" style="color:var(--green)">0</div><div class="k">knew it</div></div><div class="ro"><div class="v vc-wrong" style="color:var(--rose)">0</div><div class="k">missed it</div></div></div>');
+  function draw(){
+    $(".vc-w",host).textContent=WORDS[i][0];
+    $(".vc-m",host).textContent=WORDS[i][1];
+    $(".vc-m",host).style.display="none";
+    $(".vc-rev",host).style.display="";
+    $(".vc-r",host).style.display="none";
+    $(".vc-w2",host).style.display="none";
+    revealed=false;
+  }
+  $(".vc-rev",host).addEventListener("click",function(){
+    $(".vc-m",host).style.display="";
+    $(".vc-rev",host).style.display="none";
+    $(".vc-r",host).style.display="";
+    $(".vc-w2",host).style.display="";
+  });
+  function next(mark){
+    if(mark==="r")right++;else wrong++;
+    $(".vc-right",host).textContent=right;$(".vc-wrong",host).textContent=wrong;
+    i=(i+1)%WORDS.length;draw();
+  }
+  $(".vc-r",host).addEventListener("click",function(){next("r")});
+  $(".vc-w2",host).addEventListener("click",function(){next("w")});
+  draw();
+};
+
 </script>
 <script>
 route();
